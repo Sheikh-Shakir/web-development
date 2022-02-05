@@ -1,11 +1,11 @@
-//find all the images without alternate text
-//and give them a red border
-function process(e) {
-    var images = document.getElementsByTagName("img");
-    for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        if (img.alt == "") {
-            img.style.border = "3px solid red";
-        }
+//create a pop that prompts to enter a email address
+//create a pop that prompts to enter a password 
+function login(){
+    var email = prompt("Enter your email address");
+    var password = prompt("Enter your password");
+    if(email === "shakir@gmail.com" && password === "123"){
+        alert("Welcome to the site");
+    }else{
+        alert("Invalid email or password");
     }
 }
