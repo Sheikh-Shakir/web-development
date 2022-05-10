@@ -1,0 +1,34 @@
+
+body{
+    background-color: #66BFB;
+}
+h1{
+    color:red;
+}
+h3{
+    color: #66bf6a;
+}
+
+img:hover{
+    background-color: gold;
+    width: 100px;
+}
+
+
+/* Start of CSS Class selectors in style.css */
+.bacon{
+    background-color: #66bf6a;
+    width: 100px;
+}
+.broccli{
+    background-color:red;
+    width: 100px;
+}
+.circular{
+    border-radius: 100%;
+}
+
+/*Id selector*/
+#heading{
+    color: #66bf6a;
+}
