@@ -2,11 +2,18 @@
 body{
     margin:0;
     text-align: center;
+    font-family: 'Merriweather', serif;
 }
 h1{
     
-    width: 10%;
-    margin:0 auto 0 auto;
+    margin-top:0;
+    font-family: 'Sacramento', cursive;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+h3{
+    font-family: 'Montserrat', sans-serif; 
 }
 .top-container{
     background-color:#E4F9F5 ;
@@ -14,18 +21,14 @@ h1{
     padding-top:100px;
 }
 .middle-container{
-    background-color:red ;
-    text-align:center;
-    padding:10px;
+    
 }
 .bottom-container{
-    background-color:blue;
-    text-align:center;
-    padding:10px;
+    
 }
-.pro{
+/*.pro{
     text-decoration: underline;
-}
+} */
 .top-cloud{
     position: absolute;
     right:300px;
