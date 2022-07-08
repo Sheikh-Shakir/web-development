@@ -1,0 +1,16 @@
+
+#increment-btn{
+background-color: red;
+  width:200px;
+  height:80px;
+  margin-left: 43vw;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff
+}
+.head1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}

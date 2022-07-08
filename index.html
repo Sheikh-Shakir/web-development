@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        Id <input type="text" id="id">
+    </div>
+    <div>
+        FirstName <input type="text" id="firstName">
+    </div>
+    <div>
+        LastName <input type="text" id="lastName">
+    </div>
+
+    <div>
+        Salary <input type="text" id="salary">
+    </div>
+    <div>
+        <button id="btnSave">Save</button>
+        <button id="btnGet">All Employees</button>
+
+        <div>
+            <table style="width:100%; height:500px">
+                <thead style="background:black;color:white;height:50px">
+                    <tr>
+                        <td>Id</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Salary</td>
+                        <td>Annual Salary</td>
+                        <td>Total Hike</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody" style="background:olive;color:black">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script>
+    let x;
+    x=10;
+    let employees = [];// array
+    let txtId = document.getElementById('id');
+    let txtFirstName = document.getElementById('firstName');
+    let txtLastName = document.getElementById('lastName');
+    let txtSalary = document.getElementById('salary');
+    let employee=new Object();
+    document.getElementById('btnSave').addEventListener('click', function (e) {
+        let idVal = txtId.value;
+        let firstNameVal = txtFirstName.value;
+        let lastNameVal = txtLastName.value;
+        let salaryVal = txtSalary.value;
+
+        employee = {
+            id: idVal,
+            firstName: firstNameVal,
+            lastName: lastNameVal,
+            salary: salaryVal,
+            annualSalary:function(){
+                return this.salary*12;
+            },
+            hike:function(){
+                return this.salary*12*0.1;
+            }
+        }
+        employees.push(employee);
+        console.log(employees)
+    });
+
+    document.getElementById('btnGet').addEventListener('click', function (e) {
+        let tbody = document.getElementById('tbody');
+
+        employees.map(employee => {
+            tbody.insertAdjacentHTML("afterbegin", `
+                <tr>
+                    <td>${employee.id}</td>
+                    <td>${employee.firstName}</td>
+                    <td>${employee.lastName}</td>
+                    <td>${employee.salary}</td>
+                    <td>${employee.annualSalary()}</td>
+                    <td>${employee.hike()}</td>
+                </tr>
+                    `);
+        })
+    })
+
+
+</script>
+
+</html>
