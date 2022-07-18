@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <input type="text" id="divident" placeholder="enter divident">
+    <input type="text" id="divisor" placeholder="enter divisor">
+    <button id="btnclick" >clickme</button>
+    <script>
+        let Divident = parseInt(document.getElementById('divident').value);
+        let divisor = parseInt(document.getElementById('divisor').value);
+        document.getElementById('btnclick').addEventListener('click', ()=> {
+            let mypromise = new Promise(function (success, reject) {
+                setTimeout(function () {
+                    console.log("promise is still pending...");
+                    if (divisor > 0) {
+                        console.log("promise Succesful");
+                        success();
+                    }
+                    else {
+                        reject();
+                    }
+                }, 5000);
+            });
+        });
+        let success = () => {
+
+            let result = divident / divisor;
+            console.log(result);
+
+        }
+        let reject = () => {
+            console.log("divide by zero exception");
+        }
+        mypromise.then(success);
+        mypromise.catch(reject);
+        console.log(mypromise);
+    </script>
+</body>
+
+</html>
