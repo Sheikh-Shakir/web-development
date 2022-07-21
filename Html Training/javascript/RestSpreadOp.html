@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultDiv"></div>
+    <script>
+        // restoperator
+        function add(name,email,age,...myArray){
+            let sum=0;
+            for(let items of myArray){
+                sum=sum+items;
+            }
+            return`Name is ${name}   <br> Email is ${email}  <br>  Age is ${age} <br> Sum is ${sum}`;
+        }
+        let result=add("Shakir","Shakir@yopmail.com","24",1,2,3,4,5,6,7,8)
+        console.log(result);
+        resultDiv.innerHTML+=result;
+        //spreadOperator
+        let numbers1=[10,20,30,40,50,60];
+        let numbers2=[70,80,90,100];
+        let numbers3=[0,...numbers1,...numbers2,110,120,130];  // using spread
+        console.log(numbers3);
+        let studentDetails={
+            StudentFirstName:"shakir", //Used ilas for studentFirstName as s 
+            id:101,
+            rollNo:101,
+            marks:490
+        }
+        let {StudentFirstName:s}=studentDetails;
+        console.log(`Name is ${s} `)
+    </script>
+</body>
+</html>

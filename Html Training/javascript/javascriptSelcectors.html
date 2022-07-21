@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="main-container">
+         <ul id="List1">
+            <li class="myList">Javascript</li>
+            <li class="myList">CSS</li>
+            <li class="myList">HTML</li>
+            <li class="myList">Bootstrap</li>
+            <li class="myList">c#</li>
+            <li class="myList">Java</li>
+            <li class="myList">Sql Server</li>
+         </ul>
+    </div>
+    <div id="resultdiv"></div>
+    <script>
+        // const mylist=document.getElementById('List1');
+        // console.log(mylist.innerText);
+        // const myList=document.querySelector('#List1');
+        // console.log(myList);
+        // const myList=document.querySelector('.myList');
+        // console.log(myList);
+        const myList=document.querySelectorAll('.myList');
+        // // console.log(myList[1].innerText);
+        myList.forEach((v,i,array)=>{
+        //    console.log(v.innerText)
+        resultdiv.innerHTML+=`<div>${v.innerText} </div>`;
+        })
+        // const myList=document.getElementsByTagName('li');
+        // console.log(myList);
+    </script>
+</body>
+</html>

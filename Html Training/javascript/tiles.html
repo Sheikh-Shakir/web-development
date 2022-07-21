@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiles</title>
+    <style>
+        .maindiv {
+            width: 40vw;
+            min-height: 30vh;
+            border: 2px solid green;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+
+        #topimg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-img {
+            width: 200px;
+            height: 100px;
+            padding-left: 50px;
+        }
+
+        .tile {
+            margin: 0 auto;
+            border: 3px inset beige;
+            padding: 4px;
+        }
+        .topimg{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="maindiv">
+            <img id="topimg" class="img" src="htmldemo/images/image2.jpeg" alt="">
+        </div>
+        <div class="tile" id="tile">
+            <img class="main-img" src="htmldemo/images/image2.jpeg" alt="">
+            <img class="main-img" src="htmldemo/images/image3.jpeg" alt="">
+            <img class="main-img" src="htmldemo/images/red rose.webp" alt="">
+            <img class="main-img" src="htmldemo/images/mountain.jpeg" alt="">
+            <img class="main-img" src="htmldemo/images/sunset.jpg" alt="">
+            <img class="main-img" src="htmldemo/images/image3.jpeg" alt="">
+            <img class="main-img" src="htmldemo/images/red rose.webp" alt=""> 
+            <img class="main-img" src="htmldemo/images/image3.jpeg" alt="">
+            <img class="main-img" src="htmldemo/images/red rose.webp" alt="">
+            <img class="main-img" src="htmldemo/images/mountain.jpeg" alt="">
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("tile").addEventListener('click', function (event) {
+            // topimg.src=event.target.src;
+            topimg.setAttribute('src', event.target.src)
+        })
+    </script>
+</body>
+
+</html>

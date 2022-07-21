@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myDiv">
+     Event Handling
+    </div>
+    <!-- <input type="text" id="event1" placeholder="Enter something here"> -->
+    <script>
+      
+        let myDiv = document.getElementById('myDiv');
+        // let event1 = document.getElementById('event1');
+        // event1.onfocus = () => event1.style.backgroundColor = 'blue';
+        // event1.onblur = () => event1.style.backgroundColor = 'yellow';
+        // event1.onkeyup = () => event1.style.backgroundColor = 'olive';
+        myDiv.onclick = () => {
+            myDiv.style.backgroundColor = 'blue';
+            myDiv.style.borderRadius = '50%';
+        }
+        myDiv.onmouseover = () => {
+            myDiv.style.backgroundColor = 'yellow';
+            myDiv.style.width = '200px';
+            myDiv.style.height='200px';
+            myDiv.style.paddingTop='0';
+            myDiv.style.color='white';
+            myDiv.style.marginLeft='600px';
+
+        }
+        myDiv.onmouseout = () => {
+            myDiv.style.backgroundColor = 'olive';
+            myDiv.style.borderRadius = '0%';
+        }
+    </script>
+    
+</body>
+
+</html>

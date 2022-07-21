@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let numbers = new Array();
+        console.log(`Size of Array is ${numbers.length}`);
+        for (let i = 0; i <5; i++) {
+            let num = parseInt(prompt("Enter Any Number"))
+            numbers.push(num);
+            console.log(`Array Elements  : ${numbers[i]}`);
+         
+        }
+        console.log(`Size of Array is ${numbers.length}`);
+        let num = numbers.pop();
+        console.log(`Item Popped Is: ${num}`);
+        console.log(`Array After Pop is: `);
+        for (let i = 0; i < numbers.length; i++) {
+            console.log(`Array is : ${numbers[i]}`);
+        }
+        console.log(`Size of Array  After pop is ${numbers.length}`);
+    </script>
+</body>
+
+</html>

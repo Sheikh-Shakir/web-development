@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        #myDiv {
+            height: 200px;
+            width: 400px;
+            border: 3px groove burlywood;
+            text-align: center;
+            padding-top: 150px;
+            font-size: 25px;
+            background-color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv">Exception handling</div>
+    <script>
+        let myDiv = document.getElementById("myDiv");
+        myDiv.onmouseover = () => {
+            myDiv.style.backgroundColor = 'yellow';
+            myDiv.style.borderRadius="50%";
+           // myDiv.style.marginLeft="400px";
+        }
+      myDiv.onmouseout=()=>{
+        myDiv.style.backgroundColor="grey";
+        myDiv.style.borderRadius="0%";
+      }
+ myDiv.onclick=()=>{
+     myDiv.style.backgroundColor="green";
+     myDiv.style.width="98vw";
+     myDiv.style.height="200px"
+     myDiv.style.borderRadius="0%";
+
+ }
+    </script>
+
+</body>
+
+</html>

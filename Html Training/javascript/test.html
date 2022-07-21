@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            width: 100vw;
+            height: 40vh;
+            background-color: green;
+            margin: 100px  0 auto;
+            border: 2px inset grey;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            color: goldenrod;
+        }
+        #ddlcountry{
+            margin:10px auto;
+            display: block;
+            width:10vw;
+            height:20px;
+            text-align: center;
+            background-color:orange;
+
+        }
+        .Info{
+            width:50vw;
+            height:10vh;
+            margin: 0 auto;
+        }
+        .inputName{
+            height:50px;
+            width:40vw;
+            margin:10px;
+            background-color: orange;
+        }
+       #SubmitBtn{
+        width: 60px;
+          height: 50px;
+          background-color: orange;
+          margin-left: 47vw;
+          margin-top: 20px;
+       }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <a href="https://google.com" id="myLink">Google</a> </div>
+   
+    <form action="" id="eximationForm"  >
+        <div class="Info">
+            FirstName  <input class="inputName" type="text" name="firstName" id="fName" placeholder="Enter first Name">
+        </div>
+        <div  class="Info">
+         Lastname<input  class="inputName" type="text" name="lastName" id="lName" placeholder="Enter Last Name">
+        </div>
+        <div>
+            <select name="" id="ddlcountry">
+                <option value="ind">India</option>
+                <option value="pak">Pakistan</option>
+                <option value="ch">China</option>
+                <option value="afg">Afganistan</option>
+                <option value="ir">Iran</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" id="SubmitBtn">Submit</button>
+        </div>
+    </form>
+    <div id="myDiv"></div>
+    <script>
+        document.getElementById('myLink').addEventListener('click', function (event) {
+            event.preventDefault();
+        })
+        document.getElementById('myDiv').addEventListener('dblclick', function (event) {
+            console.log('double click')
+            this.style.backgroundColor = "yellow";
+        })  
+        document.getElementById('ddlcountry').addEventListener('change',function(event){
+            console.log(event.target.value);
+        })
+           const eximationForm=document.getElementById('eximationForm');
+         eximationForm.addEventListener('submit',function(event){
+            event.preventDefault();
+            let firstName=document.getElementById('fName');
+            let lastName=document.getElementById('lName');
+            let country=document.getElementById('ddlcountry');
+            // console.log(firstName.value);
+            // console.log(lastName.value)
+            // console.log(country.value); 
+            myDiv.innerHTML=`FirstName :${firstName.value}  <br>LastName :${lastName.value}  <br> Nation:${country.value}` ;
+            
+        });
+
+        
+    </script>
+</body>
+
+</html>

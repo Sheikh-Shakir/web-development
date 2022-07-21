@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: burlywood;
+        }
+        .firstTable {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 100px auto;
+            width: 40vw;
+            height: 30vh; text-align: center;
+        }
+
+        .tBody td {
+            border-bottom: 1px solid black;
+ 
+           background-color:  wheat;
+        }
+        #resultDiv{
+          border:5px inset grey;
+          background-color:bisque;
+          width:25vw;
+           height: 15vh;
+           margin: 3px;
+           color: #000;
+           font-size: 20px;
+           font-weight: bold;
+        }
+        .head1{
+            background-color: olive;
+            color:aqua;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <table class="firstTable">
+        <thead class="head1">
+
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone No</td>
+            <td>Address</td>
+            <td>Action</td>
+        </thead>
+
+        <tbody class="tBody" id="tBody">
+            <tr>
+                <td>Sahil</td>
+                <td>Sahil@yopmail.com</td>
+                <td>9999999999</td>
+                <td>gungbugh</td>
+                <td><button data-name="Sahil" data-emaigl="sahil@yopmail.com"  data-phone="9999999999" data-address="Gungbugh">get Details</button></td>
+            </tr>
+            <tr>
+                <td>shakir</td>
+                <td>shakir@yopmail.com</td>
+                <td>9999999999</td>
+                <td>nowgam</td>
+                <td><button data-name="Shakir" data-email="shakir@yopmail.com" data-phone="9999999999" data-address="Nowgam">get Details</button></td>
+            </tr>
+            <tr>
+                <td>faisal</td>
+                <td>faisal@yopmail.com</td>
+                <td>9999999999</td>
+                <td>Nowgam</td>
+                <td><button data-name="Faisal" data-email="faisal@yopmail.com" data-phone="9999999999" data-address="Hyderpora">get Details</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="resultDiv"></div>
+    <script>
+        document.getElementById('tBody').addEventListener('click',function(event){
+            if(event.target.innerText=='get Details'){
+                resultDiv.innerHTML=` ${event.target.dataset.name} <br> ${event.target.dataset.email} <br> ${event.target.dataset.phone} <br> ${event.target.dataset.address} `;
+            }
+        })
+    </script>
+</body>
+
+</html>

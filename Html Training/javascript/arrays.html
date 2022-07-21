@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <!-- <button onclick="rollnoS1()">Arrays</button>
+    <button onclick="studentName()">Arrays2</button> -->
+    <!-- <button onclick="checkEvenOdd()">EvenOddArray</button> -->
+    <div id="checkEvenOdd">
+        <script>
+            // function rollnoS1() {
+            //     let rollNos = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+            //     console.log(rollNos[0]);
+            //     console.log(rollNos[1]);
+            //     console.log(rollNos[2]);
+            //     console.log(rollNos[3]);
+            //     console.log(rollNos[4]);
+            //     console.log(rollNos[5]);
+            //     console.log(rollNos[6]);
+            //     console.log(rollNos[7]);
+            //     console.log(rollNos[8]);
+            //     console.log(rollNos[9]);
+            //     console.log('Length of Array is ' + rollNos.length);
+            // } 
+
+            // function studentName() {
+            //     let studentName = [];
+            //     studentName[0] = "Shakir";
+            //     studentName[1] = "Hazim";
+            //     studentName[2] = "Aadil";
+            //     studentName[3] = "Shahid";
+            //     studentName[4] = "zahid";
+            //     studentName[5] = "aabid";
+            //     studentName[6] = "Hazim";
+            //     studentName[7] = "asif";
+            //     console.log(studentName[0]);
+            //     console.log(studentName[1]);
+            //     console.log(studentName[2]);
+            //     console.log(studentName[3]);
+            //     console.log(studentName[4]);
+            //     console.log(studentName[5]);
+            //     console.log(studentName[6]);
+            //     console.log(studentName[7]);
+            //     console.log(`Length of Array is ` + studentName.length)
+
+            // } 
+            function checkEvenOdd() {
+                let even = new Array(10);
+                let odd = new Array(10)
+                for (let i = 0; i < 5; i++) {
+                    let num = parseInt(prompt("Enter a number"));
+                    if (num % 2 == 0) {
+                        even[i] = num;
+
+                    }
+                    else {
+                        odd[i] = num;
+                    }
+                }
+                // for (let i = 0; i < 5; i++) {
+                //     console.log(`Even Array ` + even);
+
+                // }
+                // for (let i = 0; i < 5; i++) {
+                //     console.log(`Odd Array ` + odd);
+
+                // }
+                console.log(even)
+                console.log(odd)
+            } checkEvenOdd()
+        </script>
+</body>
+
+</html>

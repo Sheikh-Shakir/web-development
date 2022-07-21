@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="firstnumber" placeholder="enter first number">
+    <input type="text" id="secondnumber" placeholder="enter second number">
+    <button onclick="addition()">Addition</button>
+     <div class="div" id="result"></div>
+   
+     <script>
+      function addition(){
+          var num1=parseInt(document.getElementById("firstnumber").value);
+          var num2=parseInt(document.getElementById("secondnumber").value);
+          var sum=num1+num2;
+          var showresult=document.getElementById("result");
+          showresult.innerHTML="The Sum of two numbers is" +sum;
+      }
+
+
+
+     </script>
+
+
+
+</body>
+
+</html>

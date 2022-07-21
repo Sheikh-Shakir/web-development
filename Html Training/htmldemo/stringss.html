@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fileupload</title>
+</head>
+
+<body>
+
+    Upload Resume <input type="file" id="fileUpload">
+    <button id="btnUpload">Upload</button>
+    <div id="resultDiv"></div>
+    <script>
+        let resultDiv = document.getElementById('resultDiv');
+        document.getElementById('btnUpload').addEventListener('click', function (e) {
+            const fileUpload = document.getElementById('fileUpload');
+            let files = fileUpload.files;
+            if (files.length > 0) {
+                resultDiv.innerHTML = "";
+                let file = files[0];
+                console.log(file);
+                let filename = file.name;
+                console.log(filename);
+                let filetype = file.type;
+                console.log(filetype);
+                let fileSize = file.size;
+                console.log(fileSize);
+                let dotIndex = filename.lastIndexOf('.');
+                let extension = filename.substring(dotIndex);
+                console.log(extension);
+                if (extension.toLowerCase() === '.jpg') {
+                    let firstPath = filename.substring(0, filename.indexOf('.'));
+                    console.log(firstPath);
+                    resultDiv.innerHTML = `<h1 style='color:red'>FileName = ${firstPath}</h1>`
+                }
+                else {
+                    resultDiv.innerHTML = "<h1 style='color:red'>Only JPG format is acceptable</h1>"
+                }
+            }
+            else {
+                resultDiv.innerHTML = "<h1 style='color:red'>Please select file</h1>"
+            }
+
+        })
+    </script>
+</body>
+
+</html>

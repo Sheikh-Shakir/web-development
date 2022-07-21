@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubString</title>
+</head>
+<body>
+    <input type="email" id="email" placeholder="Enter your Email here">
+    <input type="text" id="urlAdd" placeholder="Enter Url">
+    <button id="viewBtn">click Me</button>
+    <div id="resultDiv"></div>
+    <script>
+      document.getElementById('viewBtn').addEventListener('click',function(){
+        let emailId=document.getElementById('email').value;
+        let url=document.getElementById('urlAdd').value;
+        console.log(emailId);
+        console.log(url);
+        let email=emailId.substring(0,6);
+        console.log(email);
+        let emailName=emailId.substring(0,emailId.lastIndexOf('@'));
+        console.log(emailName);
+        let esp=emailId.substring(emailId.lastIndexOf('@')+1,emailId.lastIndexOf('.'));
+        console.log(esp);
+        let domainName=emailId.substring(emailId.lastIndexOf('.')+1);
+        console.log(domainName);
+        let protocol=url.substring(0,url.indexOf(':'));
+        console.log(protocol);
+        let subDomainName=url.substring(url.indexOf('/')+2,url.indexOf('.'));
+        console.log(subDomainName);
+        let mainDomainName=url.substring(url.indexOf('.')+1);
+        console.log(mainDomainName);
+      })
+    </script>
+</body>
+</html>

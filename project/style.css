@@ -1,0 +1,25 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-position: 0%;
+  
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 400px;
+  border-color:red;
+}
+
+.Mydiv {
+  background-color: lightblue;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  border-color:red;
+}
+.div2 {
+  background-color: greenyellow;
+}
+
+

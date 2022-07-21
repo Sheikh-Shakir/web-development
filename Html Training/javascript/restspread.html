@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Spread</title>
+</head>
+<body>
+  <div id="resultDiv"></div>
+    <script>
+      // Array Destructuring
+      let students=["Asif",45,101,"Male",["Abc",999,"xyz"]]
+      let[fullname,rollNo,id,gender,[parentage,contactNo,address]]=students;
+      console.log(`Name is ${fullname}  id is ${id} Parentage is ${parentage} ContactNo is ${contactNo} Address is ${address}`)
+        
+      //Object Destructuring
+      let obj={
+        name:"Shakir",
+        id1:102,
+        personal:{
+          lastName:"Aaaaaaaaa",
+          contact:9999999999,
+          date:new Date().toDateString(),
+          time:new Date().toTimeString()
+                }
+
+      }
+      let{name,id1,personal:{lastName,contact,date,time}}=obj;
+      console.log(`Name is :${name} Id is ${id1} lastName is ${lastName} contact is ${contact} date is${date} time is ${time}` );
+
+    </script>
+</body>
+</html>

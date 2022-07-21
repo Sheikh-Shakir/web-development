@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        #firstname {
+            text-align: left;
+            background-color: antiquewhite;
+        }
+
+        #Lastname {
+            text-align: left;
+            background-color: antiquewhite;
+        }
+
+        #uname {
+            text-align: left;
+            background-color: antiquewhite;
+        }
+
+        #pwd {
+            text-align: left;
+            background-color: antiquewhite;
+        }
+
+        #email {
+            text-align: left;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div> First Name: <input type="text" id="firstname" placeholder="Enter first Name"></div>
+    <div>Last Name: <input type="text" id="Lastname" placeholder="Enter last Name"></div>
+    <div>
+        <label for="Gender">Gender: </label>
+        <input type="radio" name="Gender" value="Male">Male
+        <input type="radio" name="Gender" value="Female">Female
+        <input type="radio" name="Gender" value="Others">Others
+    </div>
+    <div> Username: <input type="text" id="uname" name="username" placeholder="Username"></div>
+    <div>Password: <input type="password" id="pwd"></div>
+    <div> Email: <input type="email" id="email" placeholder="Enter Mail" required></div>
+    <div> Date of Birth<input type="datetime-local" name="DOB"> </div>
+    Profile photo <input type="file" id="myFile" name="filename">
+
+    <div><label for="Qualification">Qualification :</label>
+        <input type="checkbox" name="qual" value="Bca"> 12 <sup>th</sup>
+        <input type="checkbox" name="qual" value="Mca"> BCA
+        <input type="checkbox" name="qual" value="Phd"> MCA
+        <input type="checkbox" name="qual" value="Diploma">Diploma
+        <input type="checkbox" name="qual" value="Doctorate">Doctorate
+    </div>
+    <div>
+        Phone Number: <input type="tel" name="phone" id="phno">
+    </div>
+
+    <div>
+        <input type="submit">
+        <input type="reset">
+    </div>
+
+</body>
+
+</html>

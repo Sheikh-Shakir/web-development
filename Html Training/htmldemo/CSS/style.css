@@ -1,0 +1,52 @@
+
+        div{
+            background-color: blue;
+            color: whitesmoke;
+            border: 2px solid red;
+        }
+        p>b{
+            color:yellow;
+            
+        }
+       p{
+           background-color: inherit;
+           border:inherit;
+           background-color: #fff;
+       }
+       b{
+           color:tomato;
+           font-size: large;
+       }
+       div{
+           background-color: springgreen;
+           color: royalblue;
+       }
+       html{
+        font-family: 'Merriweather', serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Sacramento', cursive;
+       }
+.mypara{
+    border-color: darkkhaki;
+    color: rebeccapurple;
+    border:2px solid sandybrown;
+    background-color:seagreen;
+}
+*{
+ background-color:blue;
+}
+h1,h3,b{
+    background-color:greenyellow;
+    color:teal
+}
+h2{
+    background-color: violet;
+    color: burlywood;
+}
+p>b{
+    background-color: red;
+    font-size: large;
+}
+#head{
+    background-color: skyblue;
+}

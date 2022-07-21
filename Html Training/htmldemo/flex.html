@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+  .flex-container{
+    /* Default direction horizantal */
+    background-color: grey;
+    display: flex;
+    border: 2px solid blue;
+    height: 40vh;
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row-reverse; */
+    /* Justify content */
+    justify-content: center;
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+
+/*     
+    justify-content: space-evenly;
+    justify-content: space-around;
+    justify-content: space-between; */
+    /* align items */
+    /* align-items: center; */
+    /* align-items: flex-end; */
+    /* align-items: flex-start; */
+    /* align-items: baseline; */
+    /* align-items: ; */
+    /* flex-wrap: wrap; */
+
+    flex-wrap: wrap-reverse;
+  }
+  .flex-item{
+    background-color: red;
+    border: 2px solid black;
+    margin:20px;
+    padding: 12px;
+    width:122px;
+    height: 122px;
+  }
+  .item1{
+    /* order: 3; */
+    flex-grow: 3;
+    align-self: center;
+    background-color: aqua;
+  }
+  .item4{
+    /* order:5; */
+    flex-grow: 2;
+    background-color: yellow;
+  }
+  .item3{
+ 
+  flex-shrink: 2;
+    background-color: green;
+  }
+  .item4{
+ 
+    background-color: olive;
+  }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+    <div class="flex-item item1">1</div>   
+    <div class="flex-item item2">2</div>   
+    <div class="flex-item item3">3</div>   
+    <div class="flex-item item4">4</div>   
+ </div>
+</body>
+</html>

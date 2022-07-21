@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in html</title>
+</head>
+<body >
+    <script>
+    //     let numbers=new Array(5);
+    //     console.log(numbers.length);
+    //    let size= parseInt(prompt("Enter the range"));
+    //     for(let i=0;i<size;){
+    //         let num=parseInt(prompt("Enter Any Number"));
+    //         if(num%2==0){
+    //             numbers[i]=num;
+    //             i++;
+    //         }
+    //         else{
+    //             numbers[i]=num;
+    //         }
+    //     }
+    //     for(let i=0;i<size;i++){
+    //       console.log(numbers[i]);
+    //     }
+    let number=new Array(5);
+    let RevArray= new Array(5);
+    var i=0;
+    console.log(`Size of Array is :` +number.length);
+    let range=parseInt(prompt("Enter Array Size"));
+    for(var i=0;i<range;i++){
+        let num=parseInt(prompt("Enter Array Value"));
+        number[i]=num;
+        console.log(`Array is :` +number[i]);
+    }
+    for(var j=range-1;j>=0;j--){
+        RevArray[i]=number[j];
+        console.log(`Reverse Array is: ` +RevArray[i])
+        i++;
+    }
+    </script>
+</body>
+</html>

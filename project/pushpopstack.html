@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <label for="number">
+        <input type="text" id="number" name="number" value="" placeholder="Enter Any number">
+    </label>
+    <div>
+        <button type="text" onclick="push()">Push</button>
+        <button type="text" onclick="unshift()">Unshift</button>
+        <button type="text" onclick="pop()">pop</button>
+        <button type="text" onclick="ShiftArray()">Shift</button>
+    </div>
+    <div id="num">
+        <script>
+            let items = new Array();
+            function push() {
+
+                let val = parseInt(document.getElementById("number").value);
+                let x = items.push(val);
+                console.log(` Element Pushed using Unshift is ${x}`);
+                //   document.getElementById("num").innerHTML +=x;
+
+                console.log(items);
+
+            }
+            function unshift() {
+                let val = parseInt(document.getElementById("number").value);
+
+                let x = items.unshift(val);
+                console.log(` Element Pushed using Unshift is ${x}`);
+                console.log(items);
+
+            }
+            //pop stack
+            function pop() {
+                let x = items.pop();
+                console.log(`Popped Element using pop is ${x}`);
+                console.log(items);
+            }
+            //shift queue
+            function ShiftArray() {
+                let x = items.shift();
+                console.log(`Popped Element using shift is ${x}`);
+                console.log(items);
+            }
+
+
+        </script>
+</body>
+
+</html>

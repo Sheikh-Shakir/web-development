@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Function</title>
+</head>
+
+<body>
+    <div>
+        Enter Elements:<input type="text" name="number" id="number" value="" placeholder="Enter Array Elements">
+    </div>
+    <button type="text" onclick="pushArray()">Push</button>
+    <button type="text" onclick="filterArray()">Filter</button>
+    <button type="text" onclick="includesMethod()"> Check number</button>
+    <div id="result">
+        <script>
+            let elements = new Array();
+            function pushArray() {
+                let value = parseInt(document.getElementById("number").value)
+                elements.push(value);
+                document.getElementById('result').innerHTML = elements;
+                //console.log(elements);
+            }
+           
+            function filterArray() {
+                newArray = elements.filter(value => value % 2 == 0);
+
+                newArray.forEach((v) => document.getElementById('result').innerHTML = newArray);
+                // console.log(elements)
+                document.getElementById('result').innerHTML = newArray;
+            }
+            function includesMethod() {
+                // let num = parseInt(prompt("Enter Number to check").value);
+                let isAvailable = elements.includes(20);
+                // console.log(isAvailable);
+                document.getElementById('result').innerHTML = isAvailable;
+            }
+           
+//  let myArray=[1,2,3,4,5,6,7,8,9,10]
+//  let newArray=myArray.filter(value=>value%2==0)
+//  myArray.forEach((v)=>console.log(v))
+// console.log("=====================New Array=====================")
+//  newArray.forEach((v)=>console.log(v))
+        </script>
+</body>
+
+</html>

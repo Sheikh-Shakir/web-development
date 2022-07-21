@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+</head>
+
+<body>
+  <div>  First Number : <input type="text" id="firstnumber" placeholder="Enter first number"> </div>
+   <div> Second Number : <input type="text" id="secondnumber" placeholder="Enter second number"> </div>
+    <div><button onclick="addition()">sum</button></div>
+    <div><button onclick="fun1()">Sum</button></div>
+    <div> <button onclick="fun2()">Sum</button> </div>
+    <div><button onclick="fun3()">Sum</button> </div>
+    <div><button onclick="fun4()">Sum</button> </div>
+    <div id="resultDiv">
+        <!-- Simple function -->
+        <script>
+
+            function addition() {
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var sum = num1 + num2;
+                var showresult = document.getElementById("resultDiv");
+                showresult.innerHTML = "The Sum of two Numbers is " + sum;
+
+            }
+
+
+
+        </script>
+        <!-- function expression -->
+
+        <script>
+            var fun1 = function sum() {
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var sum = num1 + num2;
+                var showresult = document.getElementById("resultDiv");
+                showresult.innerHTML = "The Sum of two Numbers is " + sum;
+            }
+
+        </script>
+        <!-- Anonymous function -->
+        <script>
+            var fun2 = function () {
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var sum = num1 + num2;
+                var showresult = document.getElementById("resultDiv");
+                showresult.innerHTML = "The Sum of two Numbers is " + sum;
+            }
+
+        </script>
+
+        <!--     Arrow function   -->
+
+        <script>
+            var fun3 = () => {
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                var sum = num1 + num2;
+                var showresult = document.getElementById("resultDiv");
+                showresult.innerHTML = "The Sum of two Numbers is " + sum;
+            }
+        </script>
+        <script>
+            var fun4 = function () {
+                var num1 = parseInt(document.getElementById("firstnumber").value);
+                var num2 = parseInt(document.getElementById("secondnumber").value);
+                function add() {
+                    var result = num1 + num2;
+                    var showresult = document.getElementById("resultDiv");
+                    showresult.innerHTML = "The Sum of two Numbers is " + result;
+                } add();
+            }
+
+        </script>
+
+
+
+
+</body>
+
+</html>

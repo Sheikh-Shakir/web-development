@@ -1,0 +1,239 @@
+/*
+font-family  -->like serif,san serif.monospace
+font-size    -->  font-size property sets the size of a font
+font-style   -->The font-style property specifies the font style for a text
+font-weight   -->The font-weight property sets how thick or thin characters in text should be displayed.
+text-decoration  --> text-decoration property specifies the decoration added to text
+text-transform  -->transform text to uppercase lwercase etc
+letter spacing  -->leaves space between letters of a word
+word spacing    -->leaves space between letters of a sentence
+text-align(v and h)  -->The text-align property specifies the horizontal alignment of text in an element
+vertical align        ---> top,baseline ,middle bottom
+text-shadow   (- for left extreme and top)      --> 4 values 1.first-> HORIZANTAL align left/right (-and+ values)align 2.second(vertical align)=>top bottom(+and -val)  3.3rd->blur 4.4th=>color 
+oveflow      --> scroll,hidden,visible,auto etc
+::first-letter
+::first-line
+:hover     -->Select and style a link when you mouse over it.
+:active
+:visited
+::placeholder
+*/
+
+
+
+
+
+
+html {
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+.heading1 {
+    text-transform: capitalize;
+    word-spacing: 0%;
+    letter-spacing: 2px;
+    text-align: center;
+    color:goldenrod;
+    text-shadow: 5px 4px 4px grey,8px 6px 4px black;
+}
+
+.para1:hover {
+    font-style: italic;
+    background-color: gray;
+}
+
+.original {
+    text-decoration: line-through;
+}
+
+.discount {
+    text-decoration: underline;
+}
+
+.nav a {
+    text-decoration: none;
+    float: right;
+    color: black;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    background-color: burlywood;
+}
+
+.nav li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 20px;
+
+
+}
+
+#menu {
+    float: right;
+    text-align: right;
+    width: auto;
+    background-color: orange;
+    width: 100%;
+
+
+}
+
+#body {
+    margin: 5px;
+    background-color: ghostwhite;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+} */
+
+/* img {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    /* vertical-align: auto;*/
+    vertical-align: top;
+    /* vertical-align: baseline;
+    vertical-align: middle; */
+} */
+.para1::first-letter{
+ font-size: 3rem;
+}
+.para1::first-line{
+    font-size: 2rem;
+   }
+.myPara{
+    margin-top: 10px;
+    width:98vw;
+    height:50vh;
+    border: 5px solid grey;
+    /* overflow:scroll; */
+    /* overflow: hidden; */
+/* overflow:visible; */
+     /* overflow: auto; */
+     overflow:scroll;
+}
+.mypara::first-letter{
+    font-size: 2rem;
+}
+#price::first-line{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.nav> li> a:hover{
+  background-color: steelblue;
+}
+#foot1{
+    margin-left: 1000px;
+}
+#foot1 >a{
+    
+   padding: 10px;
+   text-decoration: none;
+   text-align: right;
+  
+}
+#foot1 >a:visited{
+   color:orangered;
+}
+#foot1 >a:active{
+    color:green;
+}
+#foot{
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+#printPara{
+    text-align: center;
+    font-weight: bold;
+}
+.printers{
+    margin-left: 50px;
+}
+.printers>li{
+    /* list-style: circle; */
+    /* list-style: decimal; */
+    /* list-style: decimal-leading-zero; */
+    /* list-style: georgian; */
+    /* list-style: upper-roman; */
+    list-style-image: url(../images/hand1.png);
+}
+.empTable{
+    width:100vw;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    empty-cells: collapse;
+}
+.empTable td{
+    border-bottom:2px solid grey;
+    color:darkgoldenrod;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.thead{
+    background-color:black;
+    height: 50px;
+    color:whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+}
+.tfoot{
+    background-color: black;
+    color:floralwhite;
+    font-weight: bold;
+    font-size: 25px;
+}
+.odd{
+    background-color: yellowgreen;
+}
+.even{
+    background-color:silver;
+}
+.even:hover{
+    background-color: rebeccapurple;
+}
+.odd:hover{
+    background-color:cornflowerblue;
+}
+.heading1{
+    text-align: center;
+}
+.heading1:hover{
+    background-color: darkslategrey;
+}
+.myDiv1{
+    width:30vw;
+    height:20vh;
+    background-color: blue;
+}
+.rightImg{
+   display: block;
+   margin:0 auto;
+   border-radius: 50%;
+}
+.centerDiv{
+    margin-top: 50px;
+    width:30vw;
+    height: 20vh;
+    border-radius: 50%;
+    border:5px inset grey;
+    margin: 0 auto;
+}
+.mediumImage{
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.container{
+    background-image: url("../images/mountain.jpeg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="List1" class="List1">
+            <li class="myList">Hardware</li>
+            <li class="myList">Software</li>
+            <li class="myList">Firmware</li>
+            <li class="myList">Logichub</li>
+        </ul>
+    </div>
+    <div id="resultDiv"></div>
+    <form action="" class="myform" >
+        <div>
+            <input type="text" name="Username" id="uName" class="userName" placeholder="Enter User Name">
+            <input type="password" name="password" id="pwd" class="pswd" placeholder="Enter Password">
+            <div>
+                <a id="myLink" href="https://google.com" data-name="Shakir" data-Address="Kulgam" data-College="Kashmir University">Google</a>
+            </div>
+        </div>
+    </form>
+    <script>
+    //         const myList=document.querySelectorAll('.myList');
+    //         myList.forEach((v,i,array)=>{
+    // //    console.log(v.innerText)
+    // resultDiv.innerHTML+=`<div>${v.innerText} </div>`;
+    //     });
+//   const myList=document.querySelector('.List1 .myList');
+//   console.log(myList.innerText);
+ 
+   document.getElementById('uName').addEventListener('change',function(event){
+    event.preventDefault();
+    let uName=document.getElementById('uName').value;
+    console.log(uName);
+    let password=document.getElementById('pwd').value;
+    console.log(password);
+
+   });
+   const myLink=document.getElementById('myLink').addEventListener('click',function(event){
+          event.preventDefault();
+         console.log(this.dataset.name);
+         console.log(this.dataset.address);
+         console.log(this.dataset.college)
+   });
+    </script>
+</body>
+</html>

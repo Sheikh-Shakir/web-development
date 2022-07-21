@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Function</title>
+    <style>
+        #btn {
+            margin-left: 40%;
+            padding: 20px;
+            /* margin: 2px; */
+            box-sizing: border-box;
+        }
+        .btn{
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn">
+        <button class="btn" id="btnStart">Start</button>
+        <button class="btn" id="btnStop">Stop</button>
+    </div>
+    <h1 id="clock"></h1>
+    <script>
+        let intervalId;
+        let clock = document.getElementById('clock');
+
+        document.getElementById('btnStart').addEventListener('click', function () {
+              intervalId = setInterval(() => {
+                let myDate = new Date();
+                let timePart = myDate.toLocaleTimeString();
+                clock.innerHTML = timePart;
+                // clock.style.backgroundColor="green";
+                clock.style.marginLeft = "40%"
+                clock.style.marginTop = "250px";
+                clock.style.fontSize = "35px";
+
+            }, 1000)
+        });
+        document.getElementById('btnStop').addEventListener('click', function () {
+            clearInterval(intervalId);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="" id="myForm" class="myForm" data-name="Aasif" data-address="rajpora" data-house-no="35">
+        <input type="text" id="username" name="Username" placeholder="Enter UserName">
+        <input type="text" id="email" name="email" placeholder="Enter Email">
+        <input type="text" id="phoneNo" name="phoneNo" placeholder="phoneNo">
+        <button type="submit" class="mybtn">Submit</button>
+    </form>
+    <div id="resultdiv"></div>
+ <script>
+        const myForm = document.getElementById("myForm");
+        // let userName = document.getElementById('username').value;
+        //     let emailId = document.getElementById('email').value;
+        //     let phoneNo = document.getElementById('phoneNo').value;
+        //     document.getElementById('resultdiv').innerHTML=` Username is ${userName} <br>and  Email is ${emailId} <br>PhoneNo=> ${phoneNo}`;
+             
+        myForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log(this.dataset.name);
+            console.log(this.dataset.address);
+            console.log(this.dataset.houseNo);
+              
+        });
+       
+        
+    </script>
+</body>
+
+</html>

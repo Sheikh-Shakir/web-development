@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Elements</title>
+    <style>
+        .container{
+            width:100%;
+            height: 400px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1>Welcome to LogicHub</h1>
+    <h2 id="myPara">Innovate Share And Develop</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reprehenderit quos numquam vel voluptate nisi quae delectus asperiores, ullam officiis!</p>
+</div>
+<div id="myDiv"  style="border:2px solid black">
+<h1 style="display:none;">this is a car </h1>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut laboriosam nobis molestias eligendi incidunt placeat, officiis vero et ut? Aliquid, aut odit et deserunt non reprehenderit, quia veniam reiciendis quae ratione delectus voluptatum corporis dicta autem maiores! Sed quidem vero non incidunt adipisci cum laudantium. Fuga commodi quam qui laborum.</p>
+</div>
+<div id="myDiv2"></div>
+<script>
+// const myDiv=document.getElementById('container');
+// const myPara=document.createElement('p');
+// const textNode=document.createTextNode('Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur ducimus distinctio rerum aspernatur, consequatur temporibus nobis cupiditate maxime architecto tenetur a totam voluptatem velit laudantium voluptatum repellendus aliquam et sunt dolore quasi amet. Aliquam, adipisci qui molestias, quam itaque eveniet saepe soluta ipsam amet debitis harum laborum porro eligendi!');
+//append Always Inserts at end
+// const myHead=document.createTextNode()
+// myPara.appendChild(textNode);
+// myPara.appendchild(textNode);
+// console.log(myPara);
+// myDiv.appendChild(myPara);
+//Insert Before Inserts Any element before the defined location in the condition
+// myDiv.insertBefore(myPara, myDiv.children[0]);
+const myDiv=document.getElementById('myDiv');
+// const myHeading=document.createElement("h1");
+myDiv.innerHTML=`<ul>
+    <li>hardware</li>
+    <li>software</li>
+    <li>firmware</li>
+</ul>`;
+// const myComment=document.createComment('This Is comment');
+// myDiv.appendChild(myComment);
+// // myDiv.appendChild(myHeading);
+// const myPara=document.createElement('p');
+// const textNode=document.createTextNode('This is my text Node ');
+// myPara.appendChild(textNode);
+// myDiv.insertBefore(myPara,myDiv.children[0]);
+// console.log(myPara);
+const myDiv2=document.getElementById('myDiv2');
+myDiv2.innerHTML=`<ul>
+    <li>LogicHub</li>
+    <li>Software</li>
+    <li>Solution</li>
+</ul>`;
+console.log(myDiv2)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+            font-family: 'Roboto Condensed', sans-serif;
+
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .nav {
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+        }
+
+        .nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .nav ul {
+            margin-left: auto;
+            width: 50%;
+            margin-top: -70px;
+        }
+
+        .nav a {
+            font-weight: bold;
+            font-size: 20px;
+            color: #000;
+        }
+
+        .nav a:hover {
+            color: #f65a4cf5;
+        }
+
+        .nav .img-logo {
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+
+        .bodyDiv {
+            width: 100%;
+            height: 570px;
+            position: relative;
+        }
+
+        .leftDiv {
+            width: 30%;
+            height: 100%;
+            background-color: #f65a4cf5;
+            position: absolute;
+            padding: 100px;
+        }
+
+        .leftDiv>h1 {
+            font-family: 'Cookie', cursive;
+            font-size: 60px;
+            margin-top: 100%;
+            color: #fff;
+
+        }
+
+        .leftDiv>p {
+            font-weight: bold;
+            font-size: 15px;
+            padding: 8px;
+            color: #fff;
+        }
+
+        .rightdiv {
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/slide-02.jpg");
+        }
+
+        .btn-R {
+            padding: .6rem .9rem;
+        }
+
+        .btn-R:hover {
+            background-color: #f65a4cf5;
+            border-color: #fff;
+        }
+
+        .AboutUs {
+            width: 100%;
+            height: 570px;
+            position: relative;
+        }
+
+        .content h1 {
+            white-space: wrap;
+            /* margin-top: 60px; */
+            /* padding: 20px; */
+            margin-left: 30px;
+        }
+
+        .AboutUs {
+            /* border:3px solid red; */
+            box-sizing: border-box;
+            /* padding:0px; */
+            margin-top: 80px;
+            /* margin-bottom: 40px; */
+
+        }
+
+        .content {
+            border:3px solid green;
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .content-img {
+
+            width: 50%;
+            float: right;
+            height: 100%;
+            background-image: url("../images/about-video-bg.jpg");
+            background-repeat: no-repeat;
+            /* padding-left: 30px; */
+            background-position: right;
+            background-position-x: center;
+
+        }
+
+        .content-img img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+        }
+
+        .myPara {
+            margin-top: 20px;
+            margin-left: 30px;
+            word-break: break-all;
+            font-weight: bold;
+        }
+
+        .menu-img {
+            padding: 20px;
+        }
+
+        .About {
+            position: relative;
+            padding: 20px;
+            color: #f65a4cf5;
+            box-sizing: border-box;
+        }
+
+        .content p:first-of-type::before {
+            content: "";
+            width: 1rem;
+            height: 1px;
+            position: absolute;
+            background-color: #f65a4cf5;
+            transform: translateY(-50%);
+            left: .8rem;
+            top: 50%;
+            z-index: 5;
+            left: 0.15;
+        }
+
+        .content-2 {
+            margin-top: 40px;
+            width: 100%;
+            height: 500px;
+            background-color: wheat;
+            box-sizing: border-box;
+        }
+        #icons-img{
+            position: absolute;
+            /* top:1px; */
+            left:50%;
+            top:1776px;
+        }
+
+        #head1 {
+            width: 400px;
+            padding: 30px;
+        }
+
+        .leftCakes {
+            /* border:3px solid red; */
+            width: 28%;
+        }
+
+        .rightcakes {
+            /* border:3px solid blue; */
+            width: 75%;
+            height: 100%;
+            float: right;
+            display: inline-block;
+            margin-top: -120px;
+        }
+
+        .img-cake {
+            /* width:20%; */
+            /* width:300px; */
+            /* height: 200px; */
+            /* padding: 10px; */
+            /* margin-left: 20px; */
+            height: 200px;
+            padding-left: 50px;
+        }
+
+        /* .content-1 p:first-of-type::before {
+            content: "";
+            width: 1rem;
+            height: 1px;
+            position: absolute;
+            background-color: #f65a4cf5;
+            transform: translateY(-50%);
+            left: -0.8rem;
+            top: -3%;
+            /* z-index: 5; 
+        } */
+
+        .OUR-MENU {
+            margin-left: 30px;
+            padding-top: 5px;
+            color: #f65a4cf5;
+        }
+
+        .chefs {
+            margin-top: 20px;
+        }
+
+        .our-chefs {
+            margin-left: 45vw;
+            color: #f65a4cf5;
+
+            /* text-align: center; */
+        }
+
+        .chefs h1 {
+            width: 250px;
+            text-align: center;
+            margin-top: 20px;
+            margin-left: 38vw;
+            /* padding-top: ; */
+        }
+
+        .chef-img {
+            background-color: wheat;
+            width: 100%;
+            height: 580px;
+            margin-top: 40px;
+            padding-top: 10px;
+        }
+
+        .chef1 {
+            width: 25%;
+            height: 75%;
+            margin-top: 50px;
+            border: 1px solid #000;
+            float: left;
+            margin-left: 80px;
+            background-image: url("../images/chefs-01.jpg");
+            background-repeat: no-repeat;
+        }
+
+        .chef1 h1 {
+            margin-top: 110%;
+            text-align: center;
+        }
+
+        .chef1 p {
+            text-align: center;
+        }
+
+        .chef2 {
+            width: 25%;
+            height: 75%;
+            margin-top: 50px;
+            border: 1px solid #000;
+            float: left;
+            margin-left: 80px;
+            background-image: url("../images/chefs-02.jpg");
+            background-repeat: no-repeat;
+        }
+
+        .chef2 h1 {
+            margin-top: 110%;
+            text-align: center;
+        }
+
+        .chef2 p {
+            text-align: center;
+        }
+
+        .chef3 {
+            width: 25%;
+            height: 75%;
+            margin-top: 50px;
+            border: 1px solid #000;
+            float: right;
+            margin-right: 60px;
+            background-image: url("../images/chefs-03.jpg");
+            background-repeat: no-repeat;
+        }
+
+        .chef3 h1 {
+            margin-top: 110%;
+            text-align: center;
+        }
+
+        .chef3 p {
+            text-align: center;
+        }
+
+        .Reservation-page {
+            width: 100vw;
+            height: 800px;
+            background-image: url("../images/reservation-bg.jpg");
+            opacity: 90%;
+        }
+
+        .Reservation-page P {
+            font-size: 15px;
+            /* color: #f65a4cf5; */
+            margin-left: 30px;
+            padding-top: 40px;
+            /* margin-top: 70px; */
+            color: #fff;
+
+        }
+
+        .reserve-table {
+            width: 500px;
+            height: 600px;
+            background-color: #fff;
+            padding-top: -5px;
+            padding-left: 60px;
+            float: right;
+            margin-right: 40px;
+            box-sizing: border-box;
+        }
+
+        input {
+            width: 40%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        #Submit-btn {
+            width: 80%;
+            /* margin-left: 20%; */
+            height: 50px;
+            background-color: #f65a4cf5;
+            font-weight: bolder;
+        }
+
+        #Submit-btn:hover {
+            background-color: #111111;
+            color: #ffff;
+        }
+
+        .reserve-table h1 {
+            text-align: center;
+            margin-right: 60px;
+        }
+
+        .reserve-table textarea {
+
+            padding: 12px 20px;
+            margin: 8px 0;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        /* .Reservation-page h1{
+            width:450px;
+            text-align: center;
+            margin-left:30%;
+        } */
+        .details {
+            width: 450px;
+            margin-left: 300px;
+            margin-top: 100px;
+            ;
+        }
+
+        .details h1 {
+            color: #fff;
+        }
+
+        .details p {
+            color: #fff;
+        }
+
+        .phoneNumber {
+            /* border: 2px solid red; */
+            background-color: #fff;
+            width: 160px;
+            float: right;
+            margin-right: 40px;
+            margin-top: 60px;
+            padding: 10px;
+        }
+
+        .phoneNumber p {
+            width: 100px;
+            color: #000;
+            /* color:#fff; */
+
+        }
+
+        .phoneNumber h3 {
+            text-align: center;
+            padding-top: 10px;
+            padding-left: 10px;
+            /* color:#fff; */
+            color: #000;
+        }
+
+        .emails p {
+            width: 100px;
+            color: #000;
+            /* color:#fff; */
+        }
+
+        .emails {
+            /* border: 2px solid; */
+            background-color: #fff;
+            width: 160px;
+            float: right;
+            margin-right: 120px;
+            margin-top: 60px;
+            padding: 10px;
+        }
+
+        .emails h3 {
+            text-align: center;
+            padding-top: 10px;
+            padding-left: 10px;
+            /* color:#fff; */
+            color: #000;
+        }
+
+        .specialOffers {
+            width: 100%;
+            height: 300px;
+        }
+
+        .specialOffers p {
+            color: #f65a4cf5;
+        }
+
+        .specialOffers p,
+        h1 {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .new-hr {
+            border: 8px solid grey;
+            border-radius: 5px;
+        }
+
+        /* .logos */
+        .menu {
+            width: 100%;
+            height: 700px;
+            /* border: 2px solid red; */
+        }
+
+        .logos {
+            display: inline-block;
+            margin-left: 35%;
+
+        }
+
+        .breakfast {
+            float: left;
+            margin-left: 10px;
+            padding: 30px;
+        }
+
+        .breakfast:hover {
+            background-color: #f65a4cf5;
+            color: #fff;
+        }
+
+        .breakfast p {
+            margin-left: 15%;
+        }
+
+        .Lunch {
+            float: left;
+            padding: 30px;
+        }
+
+        .Lunch:hover {
+            background-color: #f65a4cf5;
+            color: #fff;
+        }
+
+        .Lunch p {
+            margin-left: 27%;
+        }
+
+        .dinner {
+            float: right;
+            padding: 30px;
+        }
+
+        .dinner:hover {
+            background-color: #f65a4cf5;
+            color: #fff;
+        }
+
+        .dinner p {
+            margin-left: 27%;
+        }
+
+        .left-side-content {
+            width: 50%;
+            height: 80%;
+            padding: 20px;
+            /* border: 2px solid green; */
+
+        }
+
+        .salad {
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid yellow; */
+            margin-bottom: 40px;
+            margin-top: 20px;
+
+        }
+
+        .chicken-salad {
+            width: 20%;
+            height: 100%;
+            /* border: 2px solid black; */
+            /* background-image: url('../images/tab-item-01.png');
+            background-repeat: no-repeat; */
+        }
+
+        .chicken-salad img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .chicken-salad-content h1 {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+
+        .chicken-salad-content p {
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .chicken-salad-content {
+            /* border: 3px solid grey; */
+            width: 58%;
+            height: 100%;
+            float: right;
+            margin-top: -134px;
+            margin-right: 150px;
+        }
+
+        .chicken-salad-price {
+            height: 100%;
+            width: 150px;
+            /* border: 3px solid blue; */
+            margin-left: 77%;
+            margin-top: -134px;
+            background-color: #f65a4cf5;
+            /* float:right; */
+
+        }
+        .chicken-salad-price:hover {
+            background-color: rgba(54, 144, 160, 0.938);
+
+        }
+
+        .chicken-salad-price p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+
+        .juice {
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid orange; */
+            margin-bottom: 40px;
+
+        }
+
+        .juice-img {
+            width: 20%;
+            height: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .juice-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .juice-content h1 {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+
+        .juice-content p {
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .juice-content {
+            /* border: 3px solid blue; */
+            width: 58%;
+            height: 100%;
+            float: right;
+            margin-top: -134px;
+            margin-right: 150px;
+        }
+
+        .juice-price {
+            height: 100%;
+            width: 150px;
+            /* border: 3px solid blue; */
+            margin-left: 77%;
+            margin-top: -134px;
+            background-color: #f65a4cf5;
+        }
+        .juice-price:hover {
+            background-color: rgba(54, 144, 160, 0.938);
+
+        }
+        .juice-price p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .fruit-salad {
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid gold; */
+        }
+
+        .fruit-salad-img {
+            width: 20%;
+            height: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .fruit-salad-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fruit-salad-content {
+            /* border: 3px solid blue; */
+            width: 58%;
+            height: 100%;
+            float: right;
+            margin-top: -134px;
+            margin-right: 140px;
+        }
+
+        .fruit-salad-content h1 {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+
+        .fruit-salad-content p {
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .fruit-salad-price {
+            height: 100%;
+            width: 150px;
+            /* border: 3px solid blue; */
+            margin-left: 77%;
+            margin-top: -134px;
+            background-color: #f65a4cf5;
+        }
+
+        .fruit-salad-price:hover {
+            background-color: rgba(54, 144, 160, 0.938);
+
+        }
+
+        .fruit-salad-price p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+
+
+
+        /*  Right Side*/
+
+
+
+
+        .right-side-content {
+            width: 50%;
+            height: 80%;
+            /* border: 2px solid red; */
+            margin-top: -565px;
+            float: right;
+            padding: 20px
+        }
+
+        .Omlate {
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid royalblue; */
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .egg-omlate {
+            width: 20%;
+            height: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .egg-omlate img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .omlate-content {
+            /* border: 3px solid blue; */
+            width: 58%;
+            height: 100%;
+            float: right;
+            margin-top: -136px;
+            margin-right: 150px;
+        }
+
+        .omlate-content h1 {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+
+        .omlate-content p {
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .omlate-price {
+            height: 100%;
+            width: 150px;
+            /* border: 3px solid blue; */
+            margin-left: 77%;
+            margin-top: -134px;
+            background-color: #f65a4cf5;
+        }
+        .omlate-price:hover {
+            background-color: rgba(54, 144, 160, 0.938);
+
+        }
+
+        .omlate-price p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+
+        /* second left */
+        .dollma-pire {
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid maroon; */
+            margin-bottom: 40px;
+        }
+
+        .dollma-pire-img {
+            width: 20%;
+            height: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .dollma-pire-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dollma-pire-content {
+            /* border: 3px solid pink; */
+            width: 58%;
+            height: 100%;
+            float: right;
+            margin-top: -134px;
+            margin-right: 150px;
+        }
+
+        .dollma-pire-content h1 {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+
+        .dollma-pire-content p {
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .dollma-pire-price {
+            height: 100%;
+            width: 150px;
+            /* border: 3px solid blue; */
+            margin-left: 77%;
+            margin-top: -134px;
+            background-color: #f65a4cf5;
+        }
+        .dollma-pire-price:hover {
+            background-color: rgba(54, 144, 160, 0.938);
+
+        }
+        .dollma-pire-price p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        /* third left */
+        .cheese-omlette {
+            width: 100%;
+            height: 25%;
+            /* border: 2px solid purple; */
+        }
+
+        .cheese-omlette-img {
+            width: 20%;
+            height: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .cheese-omlette-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cheese-omlette-content {
+            /* border: 3px solid greenyellow; */
+            width: 58%;
+            height: 100%;
+            float: right;
+            margin-top: -134px;
+            margin-right: 150px;
+        }
+
+        .cheese-omlette-content h1 {
+            margin-top: -30px;
+            padding-top: 30px;
+        }
+
+        .cheese-omlette-content p {
+            text-align: center;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .cheese-omlette-price {
+            height: 100%;
+            width: 150px;
+            /* border: 3px solid blue; */
+            margin-left: 77%;
+            margin-top: -134px;
+            background-color: #f65a4cf5;
+        }
+        .cheese-omlette-price:hover {
+            background-color: rgba(54, 144, 160, 0.938);
+
+        }
+
+        .cheese-omlette-price p {
+            color: #fff;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .footer {
+            width: 100vw;
+            height: 220px;
+            background: #f65a4cf5;
+            margin-top: 100px;
+        }
+
+        .logo {
+            float: left;
+            width: 70px;
+            margin-left: 46%;
+            margin-top: -100px;
+            position: relative;
+            /* top:-25px; */
+        }
+        .social{
+            box-sizing: border-box;
+        }
+        .socialimg{
+            display: inline-block;
+            /* box-sizing: border-box; */
+        }
+      
+        .copy {
+            /* float: right; */
+            margin-left: 30%;
+            margin-top: -110px;
+            box-sizing: border-box;
+            position:absolute;
+            /* top0px; */
+            display: inline-block;
+           
+      }
+
+        .copy h3 {
+            color: #fff;
+            width: 200px;
+            margin-top: 60px;
+            float: right;
+        }
+
+        .socialimg {
+            width: 40px;
+            height: 40px;
+            margin-top: 150px;
+            margin-left: 30px;
+            position:relative;
+        }
+        .socialimg:hover{
+            filter: invert(100%);
+            /* background-0olor: #000; */
+            color:white;
+            
+        }
+
+        .phoneNumber img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            bottom: 30px;
+            left: 50px
+        }
+
+        .phoneNumber img:hover {
+            background-color: #f65a4cf5;
+        }
+
+        .emails img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            bottom: 30px;
+            left: 50px
+        }
+
+        .emails img:hover {
+            background-color: #f65a4cf5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="nav">
+            <a href="home.html" target="_blank"><img class="img-logo" src="../images/logo.png" width="50px" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="#">Chefs</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="bodyDiv">
+            <div class="leftDiv">
+                <h1>Logic Hub Cafe</h1>
+                <p>THE BEST EXPERIENCE</p>
+                <button class="btn-R">Make A Reservation</button>
+            </div>
+            <div class="rightdiv"></div>
+        </div>
+        <div class="AboutUs">
+            <div class="content">
+                <p class="About">About</p>
+                <h1>We Leave A Delicious<br> Memory for you</h1>
+
+                <p class="myPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo consequatur a cum rem
+                    non alias possimus hic nobis vel tempora placeat dolores, ad dolorum quidem, totam eos, iure labore
+                    corrupti maiores nihil ut iusto atque! Quos animi veniam fugiat ipsum.</p>
+                <p class="myPara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed quaerat et eum culpa
+                    minima ipsam dolores tempore impedit ducimus eligendi?</p>
+                <img class="menu-img" src="../images/about-thumb-01.jpg" alt="">
+                <img class="menu-img" src="../images/about-thumb-02.jpg" alt="">
+                <img class="menu-img" src="../images/about-thumb-03.jpg" alt="">
+            </div>
+            <div class="content-img"><a href="../video/video.mp4"><img src="../logo/youtube.png" alt=""></a></div>
+        </div>
+        <div class="content-2">
+            <p class="OUR-MENU">OUR MENU</p>
+            <div class="leftCakes">
+                <h1 id="head1">Our Selection of cakes with quality taste</h1>
+            </div>
+            <div class="rightcakes">
+                <img class="img-cake" src="../images/menu-item-01.jpg" alt="">
+                <img class="img-cake" src="../images/menu-item-02.jpg" alt="">
+                <img class="img-cake" src="../images/menu-item-03.jpg" alt="">
+                <img class="img-cake" src="../images/menu-item-04.jpg" alt="">
+                <img class="img-cake" src="../images/menu-item-05.jpg" alt="">
+            </div>
+            <div id="icons-img"><img class="c-icon"src="../Icons/chevron-left-regular-24.png" alt="">
+                <img class="c-icon"src="../Icons/chevron-right-regular-24.png" alt="">
+            </div>
+        </div>
+        <div class="chefs">
+            <p class="our-chefs">OUR CHEFS</p>
+            <h1>We offer the best ingredients for you</h1>
+        </div>
+        <div class="chef-img">
+            <div class="chef1">
+                <h1>Randy Walker</h1>
+                <p>Postry Chef</p>
+            </div>
+            <div class="chef2">
+                <h1>David Martin</h1>
+                <p>Cookie Chef</p>
+            </div>
+            <div class="chef3">
+                <h1>Peter Perkson</h1>
+                <p>Pancake Chef</p>
+            </div>
+        </div>
+        <div class="Reservation-page">
+            <p>CONTACT US</p>
+            <div class="reserve-table">
+                <h1>Table Reservation</h1>
+                <input id='text1' type="text" name="Name" placeholder="Your Name" onblur="onBlurFun('text1')">
+                <input id='text2' type="email" name="email" id="emailId" placeholder="Your Email Address"
+                    onblur="onBlurFun('text2')">
+                <input id='text3' type="number" name="PhoneNo" placeholder="Phone Number" onblur="onBlurFun('text3')">
+                <input id='text4' type="number" name="Guests" placeholder="number Of Guests"
+                    onblur="onBlurFun('text4')">
+                <input id='text5' type="datetime-local" name="date" onblur="onBlurFun('text5')">
+                <input id='text6' type="time" name="time" onblur="onBlurFun('text6')">
+                <textarea id='text7' name="Message" id="" cols="42" rows="10" placeholder="Message"
+                    onblur="onBlurFun('text7')"></textarea>
+                <button id="Submit-btn" type="submit">Make A reservation</button>
+            </div>
+            <div class="details">
+                <h1>Here We Can Make A Reservation or Just Walkin to our Cafe</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat possimus minima vero adipisci
+                    explicabo iusto, ea dignissimos maxime nemo distinctio.</p>
+            </div>
+            <div class="emails">
+                <img src="../logo/mail.png" alt="">
+                <h3>Emails</h3>
+                <p>hello@company
+                    info@company</p>
+                <ion-icon name="call"></ion-icon>
+            </div>
+            <div class="phoneNumber">
+                <img src="../logo/phone-call.png" alt="">
+                <h3> Phone Numbers</h3>
+                <p>090-080-0990
+                    090-080-0990</p>
+            </div>
+
+        </div>
+        <div class="specialOffers">
+            <p>LOGIC HUB WEEK</p>
+            <h1>This Week's Special</h1>
+            <hr class="new-hr">
+        </div>
+        <div class="menu">
+            <h1>Meal Offers</h1>
+            <div class="logos">
+                <div class="breakfast">
+                    <a href="#"><img src="../images/tab-icon-01.png" alt=""></a>
+                    <p>Breakfast</p>
+                </div>
+                <div class="Lunch">
+                    <a href="#"><img src="../images/tab-icon-02.png" alt=""></a>
+                    <p>Lunch</p>
+                </div>
+                <div class="dinner">
+                    <a href="#"><img src="../images/tab-icon-02.png" alt=""></a>
+                    <p>Dinner</p>
+                </div>
+            </div>
+            <div class="left-side-content">
+                <div class="salad">
+                    <div class="chicken-salad"><img src="../images/tab-item-01.png" alt=""></div>
+                    <div class="chicken-salad-content">
+                        <h1>Fresh Chicken Salad</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, autem?</p>
+                    </div>
+                    <div class="chicken-salad-price">
+                        <p>&dollar;10.50</p>
+                    </div>
+                </div>
+                <div class="juice">
+                    <div class="juice-img"><img src="../images/tab-item-02.png" alt=""></div>
+                    <div class="juice-content">
+                        <h1>Orange Juice</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, facilis?</p>
+                    </div>
+                    <div class="juice-price">
+                        <p>&dollar;9.50</p>
+                    </div>
+                </div>
+                <div class="fruit-salad">
+                    <div class="fruit-salad-img"><img src="../images/tab-item-03.png" alt=""></div>
+                    <div class="fruit-salad-content">
+                        <h1>Fruit Salad</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, et!</p>
+                    </div>
+                    <div class="fruit-salad-price">
+                        <p>&dollar;9.90</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side-content">
+                <div class="Omlate">
+                    <div class="egg-omlate"><img src="../images/tab-item-04.png" alt=""></div>
+                    <div class="omlate-content">
+                        <h1>Eggs Omelette</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quas.</p>
+                    </div>
+                    <div class="omlate-price">
+                        <p>&dollar;6.50</p>
+                    </div>
+                </div>
+                <div class="dollma-pire">
+                    <div class="dollma-pire-img"><img src="../images/tab-item-05.png" alt=""></div>
+                    <div class="dollma-pire-content">
+                        <h1>Eggs Omelette</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quas.</p>
+                    </div>
+                    <div class="dollma-pire-price">
+                        <p>&dollar;5.00</p>
+                    </div>
+                </div>
+                <div class="cheese-omlette">
+                    <div class="cheese-omlette-img"><img src="../images/tab-item-06.png" alt=""></div>
+                    <div class="cheese-omlette-content">
+                        <h1>Eggs Omelette</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quas.</p>
+                    </div>
+                    <div class="cheese-omlette-price">
+                        <p>&dollar;4.10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="social">
+                <a href="https://www.facebook.com/"> <img class="socialimg" src="../logo/facebook.png" alt=""></a>
+                <a href="https://www.linkedin.com/"><img class="socialimg" src="../logo/linkedin.png" alt=""></a>
+
+                <a href="https://twitter.com/"> <img class="socialimg" src="../logo/twitter.png" alt=""></a>
+                <a href="https://www.instagram.com/"><img class="socialimg" src="../logo/instagram.png" alt=""></a>
+            </div>
+            <div class="logo"><a href="home.html" target="_blank"><img src="../images/logo.png" alt=""></a></div>
+            <div class="copy">
+                <h3>&copy LogicHub Cafe Co. Designed By Shakir</h3>
+
+            </div>
+        </div>
+        <script>
+            function onBlurFun(id) {
+                let control = document.getElementById(id);
+                // control.style.backgroundColor = '#8645B1 ';
+                control.style.borderWidth = '5px';
+                control.style.borderColor = 'black'
+                control.style.borderStyle = 'solid';
+                control.style.borderRadius='10%';
+                // control.style.color="yellow";
+            }
+        </script>
+</body>
+
+</html>

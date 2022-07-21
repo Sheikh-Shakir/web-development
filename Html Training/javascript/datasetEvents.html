@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDataset{
+        margin-left: 40vw;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bolder;
+            color: wheat;
+        }
+        #resultDiv{
+            width: 30vw;
+            height: 20vh;
+            background-color: olive;
+            margin: 0 auto;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="myDataset" data-name="Shakir" data-email="shakir@yopmail.com" data-address="Kulgam">View Details</a>
+    <div id="resultDiv"></div>
+    <script>
+        let myDataset = document.getElementById('myDataset');
+        let resultDiv = document.getElementById('resultDiv');
+        myDataset.addEventListener('click', function(event){
+            event.preventDefault();
+            console.log(this.dataset.name);
+            console.log(this.dataset.email);
+            console.log(this.dataset.address);
+            resultDiv.innerHTML=`${myDataset.dataset.name} <br> ${myDataset.dataset.email} <br> ${myDataset.dataset.address}`
+          
+        });
+    </script>
+</body>
+</html>

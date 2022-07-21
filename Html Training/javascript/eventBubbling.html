@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Bubbling</title>
+    <link rel="stylesheet" href="css/eventBubbling.css">
+</head>
+
+<body>
+    <div id="grandParent" class="myDiv">
+        GrandParent
+        <div id="parent" class="myDiv">
+            Parent
+            <div id="child" class="myDiv">
+                Child
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("grandParent").addEventListener("click", 
+        function (event) {
+            this.style.backgroundColor = 'olive';
+            this.style.borderColor = "Red";
+            //event.stopPropagation();
+            alert("inside grandparent");
+            console.log(`Id is=> ${this.id} and class=${this.className} `)
+
+        },false);
+        document.getElementById("parent").addEventListener("click", function (event) {
+            this.style.backgroundColor = 'yellow';
+            this.style.borderColor = "blue";
+            alert("inside parent");
+            this.log(`Id is=> ${this.id} and class=${this.className} `)
+ 
+        },false)
+        document.getElementById("child").addEventListener("click", function (event) {
+            this.style.backgroundColor = 'green';
+            this.style.borderColor = "black";
+            alert("Inside Child");
+            this.log(`Id is=> ${this.id} and class=${this.className} `)
+
+        },false)
+    </script>
+</body>
+
+</html>

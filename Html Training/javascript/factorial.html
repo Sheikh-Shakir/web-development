@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a Number</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="fact" placeholder="Enter a number">
+    </div>
+    <div>
+        <button onclick="fact()">Factorial</button>
+    </div>
+    <div id="factDiv">
+        <script>
+            function fact() {
+                var num = document.getElementById("fact").value;
+                var fact = factorial(num);
+                var result = document.getElementById("factDiv");
+                result.innerHTML = "The factorial of Number is: " + fact;
+            }
+
+            function factorial(num) {
+                var i,fact=1;
+
+                if(num<=1){
+                    return 1;
+                }
+                
+                else{
+                    var result=1;
+                    result= num*factorial(num-1);
+                }
+                return result;
+            
+             }
+
+
+        </script>
+
+</body>
+
+</html>

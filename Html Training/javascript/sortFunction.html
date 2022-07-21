@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Function</title>
+</head>
+
+<body style="background-color:burlywood">
+    <div>
+        <div class="container"><label for="number">
+                Enter Array Elements<input type="text" name="number" id="number">
+            </label>
+        </div>
+        <button type="sortArray" onclick="numArray()" id="number">ENTER ELEMENTS</button>
+        <button type="sortArray" onclick="sortArray()">SORT ARRAY</button>
+        <button type="ReverseArray" onclick="reverseArray()"> REVERSE ARRAY</button>
+    </div>
+
+    <script>
+        let Array1 = new Array();
+        function numArray() {
+            let num = parseInt(document.getElementById("number").value);
+            let val = Array1.push(num);
+            console.log(Array1);
+        }
+
+        function sortArray() {
+            Array1.sort((a, b) => a - b);
+            console.log(Array1);
+
+        }
+        function  reverseArray(){
+            Array1.reverse();
+            console.log(Array1);
+        }
+
+
+
+
+
+
+
+        // let sortArray = new Array()
+        // let range = parseInt(prompt("Enter the range"));
+        // for (let i = 0; i < range; i++) {
+        //     /*
+        //     for(let i=0;i<5;i++){
+        //         let num = parseInt(document.getElementById("Number").value);
+        //         sortArray[i]=num;
+        //         console.log(`Array is :` +sortArray[i]);
+        //     }
+        //     */
+        //     let num = parseInt(prompt("Enter Any Number"));
+        //     sortArray[i] = num;
+        // }
+        // sortArray.sort((a, b) => a - b);
+
+        // document.writeln(` Array Elements After Sort :${sortArray}`);
+        // sortArray.reverse();
+        // document.writeln(` <br> Reverse Array is  : ${sortArray}`);
+
+    </script>
+</body>
+
+</html>

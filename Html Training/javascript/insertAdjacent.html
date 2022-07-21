@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InserAdjacent Elements</title>
+    <style>
+        body {
+            padding: 100px;
+            border: 3px solid red;
+        }
+
+        #subcontainer {
+            background-color: olive;
+            width: 80vw;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="subcontainer">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor quis a, doloribus deleniti
+            blanditiis, reprehenderit molestiae sit animi pariatur necessitatibus repudiandae est quos corporis possimus
+            sapiente eligendi impedit aliquid. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi quam
+            molestias sapiente dolor qui commodi facilis neque tempore eum repudiandae voluptatum provident
+            exercitationem, quos hic recusandae, impedit quo quaerat totam amet? Fugiat, eius explicabo. Corporis
+            aliquam iste vero ab excepturi natus voluptas, perferendis eveniet impedit quis cum pariatur, quidem illum
+            omnis, quae alias officia officiis beatae sed quas voluptatem dignissimos tempore. Unde debitis facere
+            provident sed. Architecto facilis distinctio natus.
+        </div>
+    <ul id="myList">
+        <li>University of Kashmir</li>
+        <li>IITM</li>
+        <li>Cluster University</li>
+        <li>Central University</li>
+        <li>Medical College</li>
+        <li>Kashmir Law College</li>
+    </ul>
+    </div>
+    <script>
+    const myList=document.getElementById('myList');
+    const  iitmNode=myList.children[1];
+    console.log(iitmNode)
+    const newItem=    document.createElement('li');
+    newItem.innerText="Logichub Software Solution";
+    //replace child method
+    myList.replaceChild(newItem,iitmNode);
+    //removeChild method
+    myList.removeChild(myList.children[4]);
+    // const doesExist=myList.contains(iitmNode);
+    const doesExist=myList.contains(newItem);
+    console.log(doesExist);
+
+
+
+      //  const container = document.getElementById('container');
+        const heading1 = document.createElement('h1');
+        //old method
+        // const headingText=document.createTextNode('Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nam quasi quod nostrum ad quo, tenetur sint consequuntur neque ipsam.');
+        // heading1.appendChild(headingText);
+        // subcontainer.appendChild(heading1);
+
+        //insertAdjacent element method
+        heading1.insertAdjacentText('afterBegin', "Welcome to LogicHub Software Solutions");
+        // subcontainer.insertAdjacentElement('afterBegin',heading1);
+        // subcontainer.insertAdjacentElement('beforeBegin',heading1);
+        // subcontainer.insertAdjacentElement('beforeend',heading1);
+        // subcontainer.insertAdjacentElement('afterend',heading1);
+        subcontainer.insertAdjacentElement('afterBegin', heading1);
+
+        //insert AdjacentHtml method
+//         const myHtml = `<ul>
+//             <li >Hardware</li>
+//             <li>Software</li>
+//             <li>Office</li>
+//             <li> Photoshop</li>
+//             <li> Logichub</li>
+//         </ul> `;
+// document.getElementById('container').insertAdjacentHTML('beforeEnd',myHtml);
+
+
+    </script>
+</body>
+
+</html>

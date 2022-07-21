@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Registeration</title>
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: pink;
+        }
+
+        .container {
+            padding: 50px;
+            background-color: lightblue;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus {
+            background-color: orange;
+            outline: none;
+        }
+
+        div {
+            padding: 10px 0;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .submitbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .submitbtn:hover {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- <center>
+            <h1> Student Registeration Form</h1>
+        </center>
+        <hr> -->
+        <!-- <table>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Parentage</td>
+                <td>Rollno</td>
+                <td>Nationality</td>
+                <td>Gender</td>
+            </tr>
+        </table> -->
+
+        <div id="firstDiv">
+
+            <div><label for="firstname">First Name:</label><input type="text" id="firstname"
+                    placeholder=" Enter First Name" name="firstname" />
+            </div>
+            <div><label for="lastname">First Name:</label> <input type="text" id="lastname" placeholder="Lastname"
+                    name="lastname" />
+            </div>
+            <div><label> Father's Name: </label><input type="text" id="parentage" placeholder="Father's Name"
+                    name="parentage" />
+            </div>
+            <div>
+                Rollno <input type="text" id="rollno" placeholder="Enter Roll no">
+            </div>
+            <div> <label> Nationality :</label>
+                <select id="nation">
+                    <option value="India">India</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="China">China</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Srilanka">Sri lanka</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Bhutan">Bhutan</option>
+                </select>
+            </div>
+            <div><label>
+                    Gender :
+                </label><br>
+                <input type="radio" id=" male" value="Male" name="gender"> Male
+                <input type="radio" id="female" value="Female" name="gender"> Female
+            </div>
+
+        </div>
+        <div>
+            <button type="submit" class="submitbtn" onclick="showStudentDetails()">Submit</button>
+        </div>
+    </div>
+    <div id="secondDiv">
+        <div id="fnameDiv"></div>
+        <div id="lnameDiv"></div>
+        <div id="parentageDiv"></div>
+        <div id="rollnoDiv"></div>
+        <div id="nationDiv"></div>
+        <div id="genderDiv"></div>
+    </div>
+    <script>
+        function showStudentDetails() {
+            var fNameTextBox = document.getElementById("firstname");
+            var fname = fNameTextBox.value;
+
+            var lNameTextBox = document.getElementById("lastname");
+            var lname = lNameTextBox.value;
+
+            var parentageTextBox = document.getElementById("parentage");
+            var parentage = parentageTextBox.value;
+
+            var rollnoTextBox = document.getElementById("rollno");
+            var rollNo = rollnoTextBox.value;
+
+            var nationalityTextBox = document.getElementById("nation");
+            var nation = nationalityTextBox.value;
+
+            var chkMale = document.getElementById("male");
+            var chkfemale = document.getElementById("female");
+
+            document.getElementById('fnameDiv').innerHTML = fname;
+
+            document.getElementById('lnameDiv').innerHTML = lname;
+
+            document.getElementById('parentageDiv').innerHTML = parentage;
+
+            document.getElementById('rollnoDiv').innerHTML = rollNo;
+
+            document.getElementById('nationDiv').innerHTML = nation;
+
+            if (chkfemale.checked) {
+                document.getElementById('genderDiv').innerHTML = "Female";
+            }
+
+            else {
+                document.getElementById('genderDiv').innerHTML = "Male";
+            }
+
+
+
+        }
+
+
+
+    </script>
+
+</html>

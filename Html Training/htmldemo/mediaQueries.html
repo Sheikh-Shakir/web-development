@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    .col1{
+        background-color: #748067;
+        width:50%;
+        height: 500px;
+        float: left;
+    }
+    .col2{
+        background-color: #b9b73b;
+        width:50%;
+        height: 500px;
+        float: left;
+    }
+    .col3{
+        background-color: #1d3e63;
+        width:50%;
+        height: 500px;
+        float: left;
+    }
+    .col4{
+        background-color: #86296f;
+        width:50%;
+        height: 500px;
+        float: left;
+    }
+    .col1 p{
+      padding: 30px;
+    }
+    .col1 h1,h2{
+        text-align: center;
+        /* padding-top: 10px; */
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+
+    @media print {
+        img{
+            display: none;
+        }
+        h1{
+            text-align: center;
+            color:red;
+        }
+        p{
+            font-size: 25px;
+            column-count: 3;
+            column-rule: 2px solid blueviolet;
+            column-gap: 10px;
+        }
+    }
+    @media screen and (min-width:768px) and(max-width:1000px) {
+        .col1{
+            width:100%;
+            overflow: hidden;
+        }
+        .col2{
+            width:100%;
+        }
+        .col3{
+            width:100%;
+        }
+        .col4{
+            width:100%;
+        }
+    }
+    @media screen and (max-width:450px) {
+        .col1{
+            width:100%;
+            overflow: hidden;
+        }
+        .col2{
+            width:100%;
+        }
+        .col3{
+            width:100%;
+        }
+        .col4{
+            width:100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+  <div class="col1" >
+    <h1>LogicHub Software Solution</h1>
+    <h2>Innovate develop and Share</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo harum id voluptatum excepturi dignissimos rem consequuntur sint omnis quo dolore itaque ipsa nulla dolorem sit obcaecati culpa ad dolorum, alias consectetur magnam vitae nihil quas possimus molestiae! Totam molestias cum sequi accusamus neque, possimus vero modi soluta esse amet id consequatur doloremque tempore iure. Officiis, numquam illo ut voluptas at laborum incidunt eum inventore cum optio. Illum ipsa quis cupiditate. Animi rem error sed blanditiis obcaecati autem. Alias recusandae aspernatur doloremque ipsa suscipit, modi explicabo minus maiores sequi accusantium vel, perferendis libero? Sapiente, quibusdam sit! Illum odit adipisci, hic, pariatur vel beatae consectetur atque sunt debitis velit mollitia commodi recusandae, in voluptas assumenda eius! Ab eaque eligendi nulla iusto quam adipisci saepe, expedita error, repudiandae facere, quod illum harum pariatur quibusdam numquam corporis optio perspiciatis architecto iste culpa? Illo iste sit blanditiis illum eveniet! Consequatur molestiae necessitatibus adipisci quibusdam neque quae, ab porro reiciendis, iusto accusamus itaque officiis praesentium corrupti nemo distinctio odit minima. Unde libero laboriosam adipisci accusamus voluptatibus ex aperiam, porro temporibus alias ipsam inventore atque, error debitis laborum hic similique ducimus facilis quaerat quas eius possimus! Rerum, iusto aliquid. Quod illum officiis dolor voluptatem voluptate, aspernatur voluptas.</p>
+  </div>
+       <div class="col2">
+        <img src="../htmldemo/images/mountain.jpeg" alt="">
+       </div>
+        <div class="col3"></div>
+        <div class="col4"></div>
+    </div>
+</body>
+</html>

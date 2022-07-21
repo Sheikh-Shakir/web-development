@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String MWethods</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="txt">
+        Upload Resume <input type="file" id="fileUpload">
+        <button id="btnUpload">Upload</button>
+    </div>
+    <script>
+        const str0 = "LogicHub Software Solution ";
+        console.log(str0);
+        //convert string to uppercase
+        let str1 = str0.toUpperCase();
+        console.log(str1);
+        //string concatenation
+        //  let str2="logic hub cafe  "
+        //     const result=str1.concat(str2,str0);
+        //     console.log(result);
+        //string Join is used with array  to convert array into string
+        const arr = ['shakir', 'Ahmad', 'Sheikh', 'residance', 'Kulgam'];
+        const result = arr.join('|')
+        console.log(result);
+        //Trim Array Method is used to trim space before and after the string
+        //trimleft
+        //trim right
+        //trim start
+        //trim end
+        const str6 = ' jammu and Kashmir trim ';
+        console.log(str6);
+        //trim left
+        let str7 = str6.trimLeft();
+        console.log(str7);
+        let str8 = str6.trimRight();
+        console.log(str8);
+
+        let res = str6.trim();
+        console.log(res);
+        //replace
+        const str9 = '  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad nobis odio iste et dolorem dolore!';
+        const resultstr = str9.replace('adipisicing', 'Lorem');
+        console.log(resultstr);
+        //subsstring  bydefault give result from given range to end of string
+        //substring()
+        //substr()
+        //slice()
+        const string1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, sit!";
+        const res1 = string1.substring(5, 31);
+        console.log(res1);
+
+        const txt=document.getElementById('txt');
+        txt.addEventListener('blur',function(e){
+            const val = e.target.value;
+        });
+       document.getElementById('btnUpload').addEventListener('click',function(e){
+          const fileupload=document.getElementById('fileUpload');
+          let file=fileUpload.files[0];
+          let filename=file.name;
+          let filesize=file.size;
+          let filetype=file.type;
+          console.log(file);
+          console.log(filename);
+          console.log(filesize);
+          console.log(filetype);
+               });
+
+    </script>
+
+</body>
+
+</html>

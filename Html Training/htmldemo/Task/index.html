@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogicHub Software Solution</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: wheat;
+        }
+
+        .heading {
+            margin-top: 0px;
+            text-align: center;
+            background: rgb(2, 0, 36);
+            max-width: 99vw;
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(99, 149, 27, 1) 35%, rgba(0, 212, 255, 1) 100%);
+            height: 90px;
+            padding-top: 10px;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        .img1 {
+            margin-left: -90vw;
+            width: 50px;
+            margin-top: 10px;
+            padding: 0 auto;
+        }
+
+        .heading>h3 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+            /* margin-top: 40px; */
+            margin-top: -90px;
+        }
+        .heading>h6{
+            margin-top: -15px;
+        }
+        .nav {
+            max-width: 99vw;
+            height: 60px;
+            margin-top: 5px;
+            background-color: #000;
+            position: sticky;
+            top:10px;
+        }
+
+        .nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .nav ul {
+            text-align: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            padding: 20px;
+            color: #fff
+        }
+
+        .nav a:hover {
+            background-color: yellow;
+            color: black
+        }
+
+        .sidebar {
+            width: 20vw;
+            height: 800px;
+            padding-left: 5px;
+            background: rgb(131, 58, 180);
+            background: linear-gradient(142deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 55%, rgba(252, 176, 69, 1) 100%);
+        }
+
+        .sidebar ul li {
+            list-style-type: none;
+            /* display: inline-block; */
+            text-decoration: none;
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .sidebar li a {
+            text-align: right;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        .logo {
+            /* margin-left:-4vw;
+            width: 100px;
+            margin-top: 10px; */
+            padding-top: 20px;
+            padding-left: 0vw;
+            float: left;
+        }
+
+        .sidebar p {
+            margin-top: 0px;
+            text-align: center;
+            height: 90px;
+            padding-top: 25px;
+            font-weight: bolder;
+            font-size: 25px;
+            float: inline-end;
+            color: #fff;
+        }
+        .logo:hover{
+   
+        }
+
+        .sidebar a {
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        .main-heading {
+            display: inline-block;
+            width: 78vw;
+            height: 90px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(142deg, rgba(2, 0, 36, 1) 0%, rgba(7, 12, 48, 1) 29%, rgba(0, 212, 255, 1) 100%);
+            float: right;
+            margin-top: -120vh;
+        }
+
+        .main-heading h1 {
+            text-align: center;
+        }
+
+        .content-div {
+            width: 78vw;
+            height: 700px;
+            /* border: 2px inset blue; */
+            float: right;
+            margin-top: -105vh;
+        }
+
+        .para {
+            width: 50%;
+            height: 50%;
+            background-color: grey;
+        }
+
+        .content1 {
+            width: 100%;
+            height: 50%;
+            /* border: 2px solid rgb(229, 255, 0); */
+            overflow: hidden;
+        }
+
+        .text {
+            width: 48%;
+            height: 100%;
+            /* border: 2px solid red; */
+            background-color: #9d7006;
+            word-wrap:break-word;
+            /* overflow-y: auto; */
+            box-sizing: border-box;
+           clear: both;
+
+        }
+
+        .text p {
+            width: 100%;
+            height: 100%;
+            float: left;
+            text-overflow: ellipsis;
+            padding: 5px;
+            /* word-wrap: break-word; */
+            /* white-space: pre-line; */
+
+        }
+
+        .content-image {
+            width: 50%;
+            height: 100%;
+            /* border: 2px solid yellow; */
+            float: right;
+            margin-left: 2px;
+            margin-top: -350px;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            float: right;
+        }
+
+        .content2 {
+            margin-top: 20px;
+            width: 100%;
+            height: 50%;
+            /* border: 2px solid rgb(255, 0, 76); */
+        }
+
+        .content-image1 img {
+            width: 100%;
+            height: 100%;
+            float: right;
+        }
+
+        .text2 {
+            width: 48%;
+            height: 90%;
+            /* border: 2px solid red; */
+            background-color: #98b80c;
+            overflow: hidden;
+            /* float :left */
+            padding: 5px;
+        }
+        .text2 p {
+            width: 100%;
+            height: 100%;
+            float: left;
+            overflow-y: hidden;
+            padding: 4px;
+            /* white-space: pre-line; */
+
+        }
+        .content-image1 img {
+            width: 50%;
+            height: 50%;
+            float: right;
+            margin-top: -325px;
+        }
+        .footer{
+            height: 50px;
+            width:100vw;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+      .link-text:hover{
+        background-color: #E32636;
+        color:wheat
+        }
+       #head6{
+        color:green
+       }
+    </style>
+
+</head>
+
+<body>
+    <div class="heading">
+        <img class="img1" src="../Task/logoonly.gif" alt="logo">
+        <h3>LogicHub Software Solutions</h3>
+        <h6 id="head6">Innovate share develop</h6>
+
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="menu.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+        </ul>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <a href="https://google.com" target="_blank">
+                <li><img class="logo" src="../Task/fb.png" width="50px"  alt="">
+                    <p class="link-text">Facebook</p>
+                </li>
+            </a>
+            <a href="https://google.com" target="_blank">
+                <li><img class="logo" src="../Task/youtube.png" width="50px"" alt="">
+                    <p class="link-text">Youtube</p>
+                </li>
+            </a>
+            <a href="https://google.com" target="_blank">
+                <li><img class="logo" src="../Task/Instagram.png" width="50px" alt="">
+                    <p class="link-text">Instagram</p>
+                </li>
+            </a>
+            <a href="https://google.com" target="_blank">
+                <li><img class="logo" src="../Task/twitter.png" width="50px"  alt="">
+                    <p class="link-text">Twitter</p>
+                </li>
+            </a>
+            <a href="https://google.com" target="_blank">
+                <li><img class="logo" src="../Task/LinkedIn.png" width="50px"  alt="">
+                    <p class="link-text">LinkedIn</p>
+                </li>
+            </a>
+            <a href="https://google.com" target="_blank">
+                <li><img class="logo" src="../Task/Google.png" width="50px" alt="">
+                    <p class="link-text">Google</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="main-heading">
+        <h1>Welcome to LogicHub Software Solution</h1>
+    </div>
+    <div class="content-div">
+        <div class="content1">
+            <div class="text">
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit saepe illum, veritatis
+                    praesentium, voluptate voluptas est perspiciatis consequuntur, quam ipsa commodi odit rem nostrum
+                    dolores culpa aspernatur quaerat cumque quibusdam! Rem doloribus consectetur beatae sapiente
+                    incidunt
+                    ratione, veritatis magnam nostrum reprehenderit! Quidem fugit consequatur voluptates atque eveniet
+                    iusto, architecto quas. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, laborum
+                    numquam adipisci suscipit dolorum molestias blanditiis totam maxime saepe esse dicta ipsa, nostrum
+                    facere culpa? Aut veniam voluptate animi, fugit nemo laudantium nam pariatur, vero eaque
+                    exercitationem
+                    nulla, necessitatibus voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+                    deserunt ea asperiores debitis quos. Tenetur assumenda id earum iure non? Lorem ipsum dolor sit,
+                    amet consectetur adipisicing elit. Repudiandae odit a eius repellat accusantium eligendi, corrupti
+                    ad laudantium, veritatis quam qui autem iste, fugit at non sint deleniti quo nesciunt. Veritatis
+                    libero quia ducimus consectetur assumenda, suscipit quae dolore provident repudiandae illo tempore,
+                    voluptatibus nesciunt reiciendis a ipsum ullam sit doloribus velit at officia, temporibus placeat.
+                    Suscipit cupiditate beatae itaque aliquid ullam tempore quis aperiam quod assumenda. Obcaecati
+                    temporibus qui eligendi atque id animi, cupiditate facere quis molestias, illo illum modi, nemo
+                    voluptatem dolor aperiam quasi a impedit corporis culpa cumque. Nihil, rerum impedit sint molestias
+                    magnam maiores at aut?</p>
+            </div>
+            <div class="content-image"><img src="../../../images/h1.jpg" alt=""></div>
+        </div>
+        <div class="content2">
+            <div class="text2">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat impedit, similique aliquam
+                    accusamus, recusandae quis autem quidem fugiat illo eligendi ad voluptatem fuga perferendis mollitia
+                    corporis officiis nemo sequi eum accusantium laudantium minima ratione sed odit voluptatum. Quo,
+                    ipsam? Amet eveniet nostrum minus ea aliquid eius eum est iure, nam laudantium, praesentium aperiam
+                    sequi fugit itaque. Rem tenetur, exercitationem dolores consequatur distinctio officiis culpa vel
+                    nulla laborum labore, magni aspernatur nihil hic doloremque illo cum qui itaque dolor beatae. Ut
+                    possimus voluptates dolor unde? Ratione quos provident voluptatem commodi! Illo asperiores
+                    explicabo, eligendi sit impedit distinctio beatae, accusamus eos, rerum quis est quisquam nostrum
+                    consectetur ipsam voluptatum? Eligendi, corporis incidunt velit nobis beatae dolorem? Laborum minus
+                    sapiente a et molestias dolorum voluptas ratione optio id saepe, fugit, placeat expedita sunt quia
+                    aspernatur quos delectus suscipit. Distinctio labore rerum quod temporibus libero error dolores
+                    eveniet illo id voluptas aut officiis quo vitae sint, assumenda sunt iste nostrum? Numquam officiis
+                    saepe doloremque soluta sapiente consectetur? Consequatur dolore animi esse, quas autem quibusdam
+                    ipsam ullam mollitia assumenda nam asperiores suscipit ad quam totam voluptates eos eveniet ipsum
+                    saepe placeat, odio sit optio exercitationem, labore vitae! Odio quaerat facere ab tempora
+                    doloremque excepturi id facilis molestiae dolorum quos. Sed qui eligendi omnis deleniti! Dolore ad
+                    non modi odit, iusto voluptatum sit enim? Provident nesciunt autem fugit, sunt debitis, illum illo
+                    quasi nulla dolores unde expedita libero facere mollitia deserunt animi! Iste corrupti earum esse
+                    recusandae, eius nostrum dolores labore nobis, illum aliquid omnis ipsum accusantium nulla magnam
+                   </p>
+            </div>
+           <div class="content-image1"><img src="../../../images/h2.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="footer">&copy;All  Rights Reserved 2022</div>
+</body>
+
+</html>

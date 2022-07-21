@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Styling</title>
+    <style>
+    .class0{
+        background-color:#fff;
+        width:50vw;
+        height:90vh;
+        border: 3px inset blue;
+    }
+        .class1 {
+            width: 50vw;
+            height: 90vh;
+            border-color: 2px inset blueviolet;
+            background-color: black;
+        }
+        .class2{
+            width: 50vw;
+            height: 90vh;
+            border-color: 2px inset blueviolet;
+            background-color: yellow;
+        }
+        .class3 {
+            width: 50vw;
+            height: 90vh;
+            border-color: 2px inset blueviolet;
+            background-color: greenyellow;
+        }
+        .class4{
+            width: 50vw;
+            height: 90vh;
+            border-color: 2px inset blueviolet;
+            background-color: pink;
+        }
+        .class5{
+            width: 50vw;
+            height: 90vh;
+            border-color: 2px inset blueviolet;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btnAdd">Add class</button>
+        <button id="btnRemove">Remove class</button>
+        <button id="btnReplace">Replace</button>
+        <div id="myDiv" class="class0"></div>
+    </div>
+    <script>
+        const myDiv = document.querySelector("#myDiv");
+       myDiv.addEventListener('click',function(e){
+                  this.classList.toggle('class5');
+        })
+        // myDiv.style.backgroundColor = "green";
+        // myDiv.style.width = "50vw";
+        // myDiv.style.height = "90vh";
+        // myDiv.style.border = "2px solid red";
+        document.querySelector('#btnAdd').addEventListener('click', function (e) {
+            myDiv.classList.add("class1","class2","class3");
+            // myDiv.classList.add("class1");
+            // myDiv.classList.add("class2");
+            // myDiv.classList.add("class3");
+          //  myDiv.className="class1, class2";
+            let Classes= myDiv.classList;
+          console.log(Classes)
+        })
+        document.querySelector('#btnRemove').addEventListener('click',function(e){
+            myDiv.classList.remove('class1','class3');
+         
+            let Classes= myDiv.classList;
+            console.log(Classes);
+        })
+        document.querySelector('#btnReplace').addEventListener('click',function(e){
+            myDiv.classList.replace('class2','class3');
+            let Classes= myDiv.classList;
+            console.log(Classes);
+        })
+      let isAvilable= myDiv.classList.contains('class1');
+         if(isAvilable){
+            myDiv.classList.replace('class1' , 'class5');
+         }
+         else{
+            myDiv.classList.add('class1');
+         }
+        let myClasses=myDiv.classList;
+        console.log(myClasses);
+    </script>
+</body>
+
+</html>

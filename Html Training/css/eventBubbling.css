@@ -1,0 +1,7 @@
+.myDiv{
+    display: table-cell;
+    width: 400px;
+    height: 200px;
+   border: 5px solid greenyellow;
+   padding: 30px;
+}

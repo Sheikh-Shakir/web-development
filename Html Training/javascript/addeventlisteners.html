@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        #myDiv{
+            height:200px;
+            width:600px;
+            border:5px solid greenyellow;
+            background-color: aquamarine;
+            text-align: center;
+            padding-top: 100px;
+            font-size: 25px;
+            font-weight: bolder;
+            color:goldenrod;
+        }
+        #txt1{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+   Add Event Listener
+    </div>
+  
+    <input type="text" id="txt1"  placeholder="Enter UserName">
+    <button id="btnRemove" >Remove Listerner</button>
+    <script>
+        let myDiv=document.getElementById("myDiv");
+   let txt1=document.getElementById('txt1');
+    txt1.addEventListener('focus',fun1,false);
+     function fun1(){
+      txt1.style.backgroundColor="red";
+      txt1.style.border="2px";
+      txt1.style.borderColor="blue";
+    }
+    txt1.addEventListener("blur",fun2, false);
+    function fun2(){
+        txt1.style.backgroundColor="violet";
+    }
+    txt1.addEventListener('keyup',fun3,false);
+    function fun3(){
+        txt1.style.borderWidth="5px";
+        txt1.style.borderStyle="solid";
+        txt1.style.borderColor="black";
+        txt1.style.backgroundColor="yellow"
+    }
+    txt1.addEventListener("keydown",fun4,false);
+    function fun4(){
+        txt1.style.backgroundColor="green";
+        txt1.style.borderWidth="5px";
+        txt1.style.borderStyle="solid";
+        txt1.style.borderColor="yellow";
+    }
+
+    myDiv.addEventListener("mouseover",()=> myDiv.style.backgroundColor="blue",false);
+    myDiv.addEventListener("mouseout",()=> myDiv.style.backgroundColor="orange",false);
+    myDiv.addEventListener("click",()=> myDiv.style.backgroundColor="grey",false);
+
+  
+   
+    </script>
+</body>
+</html>

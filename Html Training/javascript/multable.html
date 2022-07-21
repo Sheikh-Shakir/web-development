@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        button {
+            background-color: #806ae4;
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        p {
+            color: #27186b;
+        }
+    </style>
+
+</head>
+
+<body style="text-align: center;">
+    <div>
+        Enter the number : <input id="number" placeholder="Enter A number" />
+        <input type="text" id="range" placeholder="Enter a range ">
+
+        <button onclick="mulNumbers()">Print Multiplication table</button>
+        
+    </div>
+    <div id="result">
+        <script>
+            function mulNumbers() {
+                var number;
+                var result = "";
+
+                number = Number(document.getElementById("number").value);
+                range = Number(document.getElementById("range").value);
+
+                for (var i = 1; i <= range; i++) {
+                    result = result + number + "*" + i + "=" + number * i +"<br>";
+                }
+
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+</body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        .btn {
+            background-color: blue;
+            width: 90px;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" id="empId" placeholder="Enter Employee Id">
+    <input type="text"id="empName" placeholder="Enter Employee Name" >
+    <input type="text" id="empGender" placeholder="Enter Employee Gender">
+    <input type="text"id="empSalary" placeholder="Enter Employee Salary" > -->
+    <button class=" btn" onclick="addEmployee()">Add employee</button>
+    <!-- <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody id="tblBdy">
+
+        </tbody>
+    </table>
+    <div id="resultDiv"></div> -->
+    <script>
+        // let employees={
+        //     id:101,
+        //     Name:"shakir",
+        //     Gender:"Male",
+        //     Salary:50000
+        // }
+        // let employee2={
+        //     id:102,
+        //     Name:"Aasif",
+        //     Gender:"Male",
+        //     Salary:80000
+        // }
+        // console.log(`
+        // Id=${employees.id}
+        // Name=${employees.Name}
+        // Gender:${employees.Gender}
+        // Salary:${employees.Salary}
+        // `);
+        // console.log(`
+        // Id=${employee2.id}
+        // Name=${employee2.Name}
+        // Gender:${employee2.Gender}
+        // Salary:${employee2.Salary}
+        // `);
+        let employees = [];
+        let employee = {
+            id: "",
+            name: "",
+            gender: "",
+            salary: ""
+        }
+        function addEmployee() {
+            // employee.id=parseInt(document.getElementById('empId').value);
+            // employee.name=document.getElementById('empName').value;
+            // employee.gender=document.getElementById('empGender').value;
+            // employee.salary=parseInt(document.getElementById('empSalary').value);
+            employee.id=parseInt(prompt('Enter ID'));
+            employee.name = prompt('Enter name');
+            employee.gender = prompt('Enter Gender');
+            employee.salary = parseInt(prompt('Enter Salary'));
+            //    for (let index = 0 ; index <= employees.length;) {
+            //         employees[index]=employee;
+            //    }
+
+
+            employees.push(employee);
+            // console.log(employees);
+            // employees.forEach(Element => {
+            //     console.log(employee.id);
+            //     console.log(employee.name);
+            //     console.log(employee.gender);
+            //     console.log(employee.salary);
+            // });
+
+            // console.log(employees);
+            //     employees.map(emp => document.getElementById('tblBdy').insertAdjacentHTML("afterbegin",` <tr>
+            //             <td>${emp.id}</td>
+            //             <td>${emp.name}</td>
+            //             <td>${emp.gender}</td>
+            //             <td>${emp.salary}</td>
+            //         </tr>`) )
+
+        }
+    </script>
+</body>
+
+</html>

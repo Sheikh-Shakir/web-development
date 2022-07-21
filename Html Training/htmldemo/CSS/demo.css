@@ -1,0 +1,67 @@
+*{
+    margin:0;
+}
+html{
+font-size:30px;
+}
+.parent{
+    border:1px solid maroon;
+    width:100%;
+    height:100%;
+    background-color:lightblue;
+    font-size:1em;
+    /* margin: 30px; */
+}
+.child{
+
+font-size:0.5rem;
+width:50%; 
+   margin: 30px;
+}
+/*relative units 
+1. em==>inherits the font-size of the parent element
+2. rem==>inherits the font-size of the root element
+3. %==>inherits the width of the parent element
+4. px==>inherits the width of the parent element
+5. vw==>inherits the width of the viewport
+6. vh==>inherits the height of the viewport
+7. vmin==>inherits the minimum of the width and height of the viewport
+8. vmax==>inherits the maximum of the width and height of the viewport
+9. ch==>inherits the height of the viewport
+10. cw==>inherits the width of the viewport
+11. in==>inherits the width of the parent element
+12. cm==>inherits the width of the parent element
+13. mm==>inherits the width of the parent element
+14. pt==>inherits the width of the parent element
+15. pc==>inherits the width of the parent element
+16. ex==>inherits the width of the parent element
+*/
+.child> .abc{
+    font-size:1rem;
+    background-color:black;
+    color:rebeccapurple;
+    border: 10px outset greenyellow;
+}
+.lorem{
+    background-color:lightgreen;
+    font-size:1em;
+    padding:30px;
+    margin: 30px;
+    color: crimson;
+}
+.child2>p{
+    background-color:blueviolet;
+    font-size:1em;
+    padding:30px;
+    margin:30px;
+    border:30px inset red;
+}
+img{
+    width:300px;
+    height:200px;
+    margin-top: 30px;
+    /* vertical-align: top; */
+    /* vertical-align: bottom; */
+    /* vertical-align: middle; */
+    vertical-align: baseline;
+}

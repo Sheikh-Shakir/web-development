@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateTime</title>
+</head>
+<body>
+    <script>
+        let today=new Date();
+        //date
+        const year=today.getFullYear();
+
+        const month=today.getMonth();
+
+        const date=today.getDate();
+
+        const day=today.getDay();
+        //time
+        const  hour=today.getHours();
+
+        const minutes=today.getMinutes();
+
+        const seconds=today.getSeconds();
+        
+        const mseconds=today.getMilliseconds();
+
+        const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+        let monthNo = months[today.getMonth()];
+
+        //console.log(monthNo);
+
+        let dayToday=weekdays[today.getDay()];
+
+        //console.log(dayToday);
+
+        console.log(`${dayToday}/${date}/${monthNo}/${year}   ${hour}:${minutes}:${seconds}:${mseconds}` );
+
+    </script>
+</body>
+</html>

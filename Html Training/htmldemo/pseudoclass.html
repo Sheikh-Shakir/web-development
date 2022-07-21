@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoSelectors</title>
+    <style>
+        /* p:first-child{
+            background-color: red;   /* First child with parent is selected first p in our case
+        } */
+        /* p:last-child{
+            background-color:blue;  last child with parent is selected fourth p in our case
+        } */
+        /* p:nth-child(2n){
+    background-color: olive;  Alternative even childs  are selected
+       } */
+        /* p:nth-child(2n-1){
+        background-color: grey;  Alternative odd childs are selected
+       } */
+        /* same way nth-last-child starts from end to start */
+        /* p:first-of-type{
+        background-color: yellow;   first child with or without parent selected
+       } */
+        /* p:last-of-type{
+        background-color:black;    selects from  last child with or without parent
+       } */
+
+        /* nth-of-type(formula)   customized selection*/
+        /* only child selects if there is only one child
+       only-of-type selects if there is only child with or without parent
+       */
+        /* .not ->excludes the child mentioned in () using some selector
+          empty selects empty like empty div span etc
+       */
+        /* p:not(#secondPara){
+        background-color: blue;
+      } */
+      /* *{
+        margin-top: 10px;
+      } */
+        .container {
+            width: 100vw;
+            margin: 0 auto;
+            height: 6vh;
+
+        }
+.header{
+    margin-top: 20px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+        .header a {
+            padding: 20px;
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            height: 40px;
+            box-sizing: border-box;
+            border-radius: 5px;
+           margin: 30px;
+        }
+        .header a:hover{
+         background-color: rgb(192,192,192);
+        }
+        p:target{
+            background-color: yellowgreen;
+            color:white;
+            text-align: center;
+        }
+       #para p{
+        display: none;
+       }
+       #para p:target{
+        display:block;
+       } 
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="#firstPara">para 1</a>
+            <a href="#secondPara">para 2</a>
+            <a href="#thirdPara">para 3</a>
+            <a href="#fourthPara">para 4</a>
+        </div>
+
+        <div id="para">
+            <p id="firstPara"> First Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, corporis?
+            </p>
+            <p id="secondPara">Second Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nulla.</p>
+            <p id="thirdPara">Third Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, sequi.</p>
+            <p id="fourthPara">Fourth Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ex.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

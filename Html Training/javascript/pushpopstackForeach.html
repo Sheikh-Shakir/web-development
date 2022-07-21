@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <label for="number">
+        <input type="text" id="number" name="number" value="" placeholder="Enter Any Number">
+    </label>
+    <div>
+        <button type="text" onclick="push()">Push</button>
+        <button type="text" onclick="unshift()">Unshift</button>
+        <button type="text" onclick="pop()">pop</button>
+        <button type="text" onclick="ShiftArray()">Shift</button>
+        <button type="text" onclick="SpliceArray()">Splice</button>
+    </div>
+    <div id="resultDiv">
+        <script>
+            let items = new Array();
+            function push() {
+
+                let val = parseInt(document.getElementById("number").value);
+                let x = items.push(val);
+                console.log(` Element Pushed using push is ${x}`);
+                //   document.getElementById("num").innerHTML +=x;
+
+                // console.log(items);
+                console.log(`Updated Array is: `)
+                items.forEach((v, i) => console.log(`At index ${i}  Value is ${v}`));
+
+            }
+            function unshift() {
+                let val = parseInt(document.getElementById("number").value);
+                let x = items.unshift(val);
+                console.log(` Element Pushed using Unshift is ${x}`);
+                //   console.log(items);
+                console.log(`Updated Array is: `)
+                items.forEach((v, i) => console.log(`At index ${i}  Value is ${v}`));
+
+            }
+            //pop stack
+            function pop() {
+                let x = items.pop();
+                console.log(`Popped Element using pop is ${x}`);
+                //  console.log(items);
+                console.log(`Updated Array is: `)
+                items.forEach((v, i) => console.log(`At index ${i}  Value is ${v}`));
+            }
+            //shift queue
+            function ShiftArray() {
+                let x = items.shift();
+                console.log(`Popped Element using shift is ${x}`);
+                // console.log(items);
+                console.log(`Updated Array is: `)
+                items.forEach((v, i) => console.log(`At index ${i}  Value is ${v}`));
+            }
+
+            function SpliceArray() {
+                // let myArray = new Array();
+                let index = parseInt(prompt("Enter value for Index"));
+                let val = parseInt(document.getElementById("number").value); 
+                let delCount = parseInt(prompt("Enter value for Delete Count"));
+                items.splice(index, delCount, val);
+                console.log(` Element Pushed using Splice is ${val}`);
+                //console.log(items);
+                console.log(`Updated Array is: `)
+                items.forEach((v, i) => console.log(`At index ${i}  Value is ${v}`));
+
+            }
+            
+
+        </script>
+</body>
+
+</html>

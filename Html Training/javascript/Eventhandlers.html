@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<!-- Event Handling -->
+
+<body>
+    <div id="myDiv" style="background-color:whitesmoke;"></div>
+    <button onclick="handleClick()" onmousemove="onMouseOver()" onmouseout="handleMouseOut()">Click Me</button>
+    <script>
+        let myDiv = document.getElementById("myDiv");
+        function handleClick() {
+            myDiv.style.backgroundColor = "red";
+        }
+        function onMouseOver() {
+            myDiv.style.backgroundColor = "purple";
+        }
+        function handleMouseOut() {
+            myDiv.style.backgroundColor = "yellow";
+        }
+    </script>
+    <div> Text Box 1: <input type="text" id="text1" placeholder="Enter UserName" onkeyup="keyPressUp('text1')" onkeydown="keyPressDown('text1')" onblur="onBlurFun('text1')" onfocus="keyFocusFun('text1')"></div>
+    <div> Text Box 2: <input type="text" id="text2" placeholder="Enter UserName" onkeyup="keyPressUp('text2')" onkeydown="keyPressDown('text2')" onblur="onBlurFun('text2')" onfocus="keyFocusFun('text2')"></div>
+    <div> Text Box 3:  <input type="text" id="text3" placeholder="Enter UserName"onkeyup="keyPressUp('text3')" onkeydown="keyPressDown('text3')" onblur="onBlurFun('text3')" onfocus="keyFocusFun('text3')"></div>
+
+    <script>
+        function keyPressUp(id) {
+            let control = document.getElementById(id);
+            control.style.backgroundColor = 'red';
+            control.style.borderWidth = '5px';
+            control.style.borderColor = 'blue'
+            control.style.borderStyle = 'solid';
+        }
+        function keyPressDown(id){
+            let control=document.getElementById(id);
+            control.style.backgroundColor='grey';
+            control.style.borderWidth='4px';
+            control.style.borderColor='purple';
+            control.style.borderStyle='solid';
+        }
+        function onBlurFun(id) {
+            let control = document.getElementById(id);
+            control.style.backgroundColor = 'orange';
+            control.style.borderWidth = '5px';
+            control.style.borderColor = 'blue'
+            control.style.borderStyle = 'solid';
+        }
+        function keyFocusFun(id) {
+            let control = document.getElementById(id);
+            control.style.backgroundColor = 'purple';
+            control.style.borderWidth = '5px';
+            control.style.borderColor = 'yellow';
+            control.style.borderStyle = 'solid';
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

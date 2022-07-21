@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Clock</title>
+    <style>
+            body{
+                margin: 0%;
+                padding: 0%;
+                background-color: #000;
+            }
+            .container{
+                font-family: Arial, Helvetica, sans-serif;
+                color: #fff;
+                font-weight: bold;
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                font-size: 70px;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+          <span>:</span>
+         <span id="seconds">00</span> 
+         <span>:</span>
+         <span id="Miliseconds">000</span>
+         <span id="session">AM</span>
+    </div>
+    <script>
+        function  displayTime(){
+            let dateTime=new Date();
+            let hr=dateTime.getHours();
+            let mins=dateTime.getMinutes();
+            let sec=dateTime.getSeconds();
+            let msec=dateTime.getMilliseconds();
+            let session=document.getElementById('session');
+
+           if(hr>=12){
+            session.innerHTML="PM";
+           }else{
+            session.innerHTML="AM";
+           }
+
+           if(hr>12){
+            hr=hr-12;
+           }
+            document.getElementById('hours').innerHTML=hr;
+            document.getElementById('minutes').innerHTML=mins;
+            document.getElementById('seconds').innerHTML=sec;
+            document.getElementById('Miliseconds').innerHTML=msec;
+        
+
+        } 
+      setInterval(displayTime, 10);
+
+    
+    </script>
+</body>
+
+</html>

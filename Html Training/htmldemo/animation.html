@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transition transform rotate */
+        /* #container{
+            width: 350px;
+            height:200px;
+            margin-top: 100px;
+            margin-left: 200px;
+            background-color: #000;
+            
+        }
+        #subcontainer{
+            width:100%;
+            height:100%;
+            transform: perspective(200px) rotate(360deg);
+            perspective-origin: 20% 90%;
+            transition: transform 3s;
+        }
+        #subcontainer:hover{
+            transform: perspective(590px) rotateY(180deg);
+        }
+       img{
+        width:100%;
+        height:100%;
+       } */
+       /* #container{
+        width:300px;
+        height:100px;
+        margin-top:130px ;
+        background-color: rgb(171, 163, 163);
+        animation-name: myAnimation;
+        animation-duration: 5s;
+        animation-delay: 3s; 
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+       animation-timing-function:cubic-bezier(0.445, 0.05, 0.55, 0.95); Ease in easeout etc   
+       } */
+       /* Animation  */
+       #container{
+        width:300px;
+        height:100px;
+        margin-top:130px ;
+        background-color: grey;
+        background-image: url(images/sunset.jpg);
+        animation-name: Animation1;
+        animation-duration: 7s;
+        /* animation-delay: 3s; */
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transform: perspective(300px) rotate(90deg);
+       animation-timing-function: ease-in-out;
+       }
+       /* @keyframes myAnimation {
+        from{
+            background-color: green;
+        }
+        to{
+          width:600px;
+          height:200px;
+          background-color: orange;
+          border-radius: 50%;
+        }
+       } */
+       @keyframes Animation1 {
+        10%{
+            background-color: yellow;
+            background-image: url(images/sunset.jpg);
+            background-size: contain;
+            width:10vw
+        }
+        20%{
+            background-color: green;
+            background-image: url(images/sunset.jpg);
+            background-size: cover;
+            width:50vw;
+        }
+        40%{
+            background-color: olive;
+            background-image: url(images/sunset.jpg);
+            background-size: cover;
+            width:70vw;
+        }
+        60%{
+            background-color: blue;
+            width:100vw;
+            transform: perspective(300px) rotate(360deg);
+            background-image:url(images/sunset.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height:400px;
+        }
+        70%{
+            width:50vw;
+            background-color: rgb(2, 2, 2);
+            background-image: url(images/sunset.jpg);
+            background-size: cover;
+        }
+        90%{
+            width:80vw;
+            background-color: blue;
+            background-image: url(images/sunset.jpg);
+
+        }
+        100%{
+            width:10vw;
+            background-color:red;
+            background-image: url(images/sunset.jpg);
+            background-size: contain;
+        }
+       }
+    </style>
+</head>
+<body>
+    <!-- <div id="container">
+        <div id="subcontainer">
+            <img src="images/image3.jpeg" alt="">
+        </div>
+    </div> -->
+    <div id="container"></div>
+</body>
+</html>

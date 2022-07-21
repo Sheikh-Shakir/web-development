@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP METHOD</title>
+</head>
+
+<body>
+    <div>
+        Enter Number <input type="text" name="number" id="number" placeholder="Enter Array Elements">
+    </div>
+    <button onclick="push()">Push</button>
+    <button onclick="mapArray()">Map</button>
+    <button onclick="reduceArray()">Reduce</button>
+    <button onclick="someArray()">Some</button>
+    <button onclick="everyArray()">every</button>
+<div id="result">
+    <script>
+        let items = new Array();
+        function push() {
+
+            let val = parseInt(document.getElementById("number").value);
+            items.push(val);
+            // console.log(items);
+            items.forEach((v) => document.getElementById('result').innerHTML = items);
+        }
+
+        //Map() Array Method
+        //Reduce() Array MEthod
+        //Some() Array Method
+        //Every() Array method
+        function mapArray() {
+            let newArray = items.map((v, i) => v + 10);
+            console.log(`Array is ${items}`);
+            console.log(`Array After Incrementing 10 `)
+            // console.log(`Updated array is ${newArray}`);
+            newArray.forEach((v) => document.getElementById('result').innerHTML = newArray);
+        }
+        function reduceArray() {
+            let total = items.reduce((curval, preval) => preval = preval + curval);
+            // console.log(`Total :  ${total}`);
+            document.getElementById('result').innerHTML = total;
+        }
+        function someArray() {
+            let isAvail = items.some(val => val < 40);
+            // console.log(isAvail);
+            document.getElementById('result').innerHTML = isAvail;
+        }
+        function everyArray() {
+            // let num=parseInt(prompt("enter a number").value)
+            let isAvail = items.every(val => val < 10);
+            // console.log(isAvail);
+            document.getElementById('result').innerHTML = isAvail;
+        }
+
+    </script>
+</body>
+
+</html>

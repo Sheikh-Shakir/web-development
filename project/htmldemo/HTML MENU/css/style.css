@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+
+}
+
+/* body{
+    background-image: url("../../images/mountain.jpeg");
+    opacity:80%;
+} */
+.navbar ul {
+    overflow: auto;
+    text-align: center;
+}
+
+.maincontainer {
+    background-color: grey;
+    height: 800px;
+}
+
+.nav {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.navbar {
+    background-color: #935858;
+    ;
+    padding: 10px;
+}
+
+.nav>li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #e7d4d4;
+    font-size: 20px;
+
+}
+
+.nav a:hover {
+    background-color: #9a9ac9;
+}
+
+.container img {
+    margin-left: 20px;
+    /* //background-color: grey; */
+    width: 400px;
+    height: 200px;
+    /* border-style: dotted;
+    border-color: violet;
+    border-width: 30px; */
+    /* border:10px dotted olive; */
+    /* border:10px dashed maroon; */
+    border:10px inset indianred;
+    border-radius: 50%;
+   
+}
